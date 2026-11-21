@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+
+# Save files (never commit personal data)
+*.sav
+*.savbak
+*.breeding_cache.json
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Claude
+settings.local.json
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Shell/env dotfiles (leak in from WSL home via Google Drive mount)
+.bash_profile
+.bashrc
+.profile
+.zprofile
+.zshrc
+.gitconfig
+.gitmodules
+.ripgreprc
+.mcp.json
+
+# Screenshots / local assets
+# screenshot.png intentionally tracked for README
+
+resources.gpak
+icons.zip
+tools/icons.zip
+
+# Worktrees
+.worktrees/
+
+# Repo-local scratch space
+tmp/
+pytest-cache-files-*/
+.pytest_cache/
+
+# Cat visual renderer caches (generated at runtime, do not commit)
+src/CatAssets/face_cache/*
+!src/CatAssets/face_cache/.gitkeep
+src/CatAssets/part_cache/*
+!src/CatAssets/part_cache/.gitkeep
+src/CatAssets/thumbnail_cache/*
+!src/CatAssets/thumbnail_cache/.gitkeep
+src/CatAssets/DefinedShapes/*.png
+!src/CatAssets/DefinedShapes/.gitkeep
+
+# SQLite WAL/SHM sidecars from swf_database at runtime
+*.db-shm
+*.db-wal

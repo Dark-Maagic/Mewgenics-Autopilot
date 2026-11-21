@@ -1,0 +1,8031 @@
+{
+  "iblock": {
+    "name": "\"I\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "B",
+      "B",
+      "B",
+      "B"
+    ]
+  },
+  "lblock": {
+    "name": "\"L\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BS",
+      "BS",
+      "BB",
+      ".+"
+    ]
+  },
+  "oblock": {
+    "name": "\"O\"Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "BB"
+    ]
+  },
+  "tblock": {
+    "name": "\"T\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "SBS",
+      "BBB",
+      "+.+"
+    ]
+  },
+  "30sradio": {
+    "name": "30s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "40sradio": {
+    "name": "40s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "50sradio": {
+    "name": "50s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "60sradio": {
+    "name": "60s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "70sradio": {
+    "name": "70s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "80sbed": {
+    "name": "80s Bed",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB.....BB",
+      "PP.....PP",
+      "PPBBBBBPP",
+      "+++++++++"
+    ]
+  },
+  "80schair": {
+    "name": "80s Chair",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "...",
+      "P.P",
+      "PBP",
+      "+++"
+    ]
+  },
+  "80scouch": {
+    "name": "80s Couch",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".....",
+      "P...P",
+      "PBBBP",
+      "+SSS+"
+    ]
+  },
+  "80sdresser": {
+    "name": "80s Dresser",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "80sfridge": {
+    "name": "80s Fridge",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "80sradio": {
+    "name": "80s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "80sshelf": {
+    "name": "80s Shelf",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "...",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "80ssidetable": {
+    "name": "80s Side Table",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "80sstove": {
+    "name": "80s Stove",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "80stv": {
+    "name": "80s TV",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "80stable": {
+    "name": "80s Table",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "90sbed": {
+    "name": "90s Bed",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".....",
+      "BBBBB",
+      "+++++"
+    ]
+  },
+  "90scabinet": {
+    "name": "90s Cabinet",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "90scellphone": {
+    "name": "90s Cell Phone",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "90schair": {
+    "name": "90s Chair",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "90sfridge": {
+    "name": "90s Fridge",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "90sphonea": {
+    "name": "90s Phone A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "90sphoneb": {
+    "name": "90s Phone B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "90sradio": {
+    "name": "90s Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "90sshelf": {
+    "name": "90s Shelf",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BS",
+      ".B",
+      "BB",
+      "++"
+    ]
+  },
+  "90ssink": {
+    "name": "90s Sink",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "90sstool": {
+    "name": "90s Stool",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "90sstove": {
+    "name": "90s Stove",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "acrack": {
+    "name": "A Crack",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "aetherplush": {
+    "name": "Aether Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "alarmclock": {
+    "name": "Alarm Clock",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "angelicbed": {
+    "name": "Angelic Bed",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBBBB",
+      "P....P",
+      "P....P",
+      "P....P",
+      "PBBBBP",
+      "++SS++"
+    ]
+  },
+  "angelicchair": {
+    "name": "Angelic Chair",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P..P",
+      "S..S",
+      "SBBS",
+      "S++S"
+    ]
+  },
+  "angelicdresser": {
+    "name": "Angelic Dresser",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "angeliclamp": {
+    "name": "Angelic Lamp",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "PPPP",
+      "PPPP",
+      "SPPS",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "angelicshelf": {
+    "name": "Angelic Shelf",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBBB",
+      "P...P",
+      "PBBBP",
+      "P...P",
+      "PBBBP",
+      "+++++"
+    ]
+  },
+  "angelicsidetable": {
+    "name": "Angelic Side Table",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "angelictablea": {
+    "name": "Angelic Table A",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBBB",
+      "PSSPP",
+      "+SSS+"
+    ]
+  },
+  "angelictableb": {
+    "name": "Angelic Table B",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "angelictoilet": {
+    "name": "Angelic Toilet",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "angrycatbobble": {
+    "name": "Angry Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "antiquebath": {
+    "name": "Antique Bath",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SSS.",
+      "BBBB",
+      "++++"
+    ]
+  },
+  "antiquehandradio": {
+    "name": "Antique Hand Radio",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "antiquephonea": {
+    "name": "Antique Phone A",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "antiquephoneb": {
+    "name": "Antique Phone B",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "antiquephonec": {
+    "name": "Antique Phone C",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "antiquestove": {
+    "name": "Antique Stove",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "S.S",
+      "S.S",
+      "SBS",
+      "PPP",
+      "+S+"
+    ]
+  },
+  "antiquetelephone": {
+    "name": "Antique Telephone",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "apple": {
+    "name": "Apple",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "applecore": {
+    "name": "Apple Core",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "arcademachine": {
+    "name": "Arcade Machine",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "artdecoarmoire": {
+    "name": "Art Deco Armoire",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "PPPP",
+      "PPPP",
+      "PPPP",
+      "+SS+"
+    ]
+  },
+  "artdecobed": {
+    "name": "Art Deco Bed",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "S...S",
+      ".....",
+      "BBBBB",
+      "+SSS+"
+    ]
+  },
+  "artdecochair": {
+    "name": "Art Deco Chair",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "S.S",
+      "...",
+      ".B.",
+      "S+S"
+    ]
+  },
+  "artdecocouch": {
+    "name": "Art Deco Couch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P...P",
+      "PBBBP",
+      "+SSS+"
+    ]
+  },
+  "artdecodresser": {
+    "name": "Art Deco Dresser",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "artdecofridge": {
+    "name": "Art Deco Fridge",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PBP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "artdecolamp": {
+    "name": "Art Deco Lamp",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "artdecosidetable": {
+    "name": "Art Deco Side Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "artdecostove": {
+    "name": "Art Deco Stove",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "...",
+      "BBB",
+      "PPP",
+      "+S+"
+    ]
+  },
+  "artdecovanity": {
+    "name": "Art Deco Vanity",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "S..S",
+      "S..S",
+      "BBBP",
+      "PPPP",
+      "+SS+"
+    ]
+  },
+  "atomicchair": {
+    "name": "Atomic Chair",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PPP",
+      "P.P",
+      "PBP",
+      "S+S"
+    ]
+  },
+  "atomicclock": {
+    "name": "Atomic Clock",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "atomiccouch": {
+    "name": "Atomic Couch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "B...B",
+      "PBBBP",
+      "S+++S"
+    ]
+  },
+  "atomicfridge": {
+    "name": "Atomic Fridge",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "atomiclamp": {
+    "name": "Atomic Lamp",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "atomicradio": {
+    "name": "Atomic Radio",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "atomicshelf": {
+    "name": "Atomic Shelf",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBBB",
+      "...PP",
+      "BBBBB",
+      "...PP",
+      "BBBBB",
+      "PPPPP",
+      "+SSS+"
+    ]
+  },
+  "atomicsidetable": {
+    "name": "Atomic Side Table",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "SPS",
+      "+++"
+    ]
+  },
+  "atomicstove": {
+    "name": "Atomic Stove",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "...",
+      "BBB",
+      "PPP",
+      "+S+"
+    ]
+  },
+  "atomictv": {
+    "name": "Atomic TV",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "atomictable": {
+    "name": "Atomic Table",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "P..P",
+      "+SS+"
+    ]
+  },
+  "bbq": {
+    "name": "BBQ",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "S..",
+      "BBB",
+      "SPP",
+      "S++"
+    ]
+  },
+  "babywhaleaquarium": {
+    "name": "Baby Whale Aquarium",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "balloona": {
+    "name": "Balloon A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "balloonb": {
+    "name": "Balloon B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "balloonc": {
+    "name": "Balloon C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "balloond": {
+    "name": "Balloon D",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      ".",
+      "+"
+    ]
+  },
+  "balloone": {
+    "name": "Balloon E",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      ".",
+      "+"
+    ]
+  },
+  "balloonf": {
+    "name": "Balloon F",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      ".",
+      "+"
+    ]
+  },
+  "bananapeel": {
+    "name": "Banana Peel",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "baphometstatue": {
+    "name": "Baphomet Statue",
+    "stim": 0,
+    "comfort": -6,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 6,
+    "shape_td": [
+      "S.S",
+      "PBP",
+      "PPP",
+      "S+S"
+    ]
+  },
+  "barrel": {
+    "name": "Barrel",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PBP",
+      "PPP",
+      "S+S"
+    ]
+  },
+  "basiccatbobble": {
+    "name": "Basic Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bastetstatue": {
+    "name": "Bastet Statue",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "bigegg": {
+    "name": "Big Egg",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "birdcage": {
+    "name": "Birdcage",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "blackbox": {
+    "name": "Black Box",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 1,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "blackwidow": {
+    "name": "Black Widow",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bleachjug": {
+    "name": "Bleach Jug",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "blinky": {
+    "name": "Blinky",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "block": {
+    "name": "Block",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B"
+    ]
+  },
+  "blowfishaquarium": {
+    "name": "Blowfish Aquarium",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "boilingflask": {
+    "name": "Boiling Flask",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bone": {
+    "name": "Bone",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bonechair": {
+    "name": "Bone Chair",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "bonechandelier": {
+    "name": "Bone Chandelier",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S++S",
+      "S..S",
+      "P..P",
+      "BBBB"
+    ]
+  },
+  "bonecouch": {
+    "name": "Bone Couch",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S..S",
+      "B..B",
+      "PBBP",
+      "+SS+"
+    ]
+  },
+  "bonelamp": {
+    "name": "Bone Lamp",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "B",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "bonepile": {
+    "name": "Bone Pile",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "boneshelf": {
+    "name": "Bone Shelf",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "P..P",
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "bonesidetable": {
+    "name": "Bone Side Table",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "bonesink": {
+    "name": "Bone Sink",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S..",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "bonetv": {
+    "name": "Bone TV",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "bonetable": {
+    "name": "Bone Table",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBB",
+      "SPS",
+      "S+S"
+    ]
+  },
+  "book": {
+    "name": "Book",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksa": {
+    "name": "Books A",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksb": {
+    "name": "Books B",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksc": {
+    "name": "Books C",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksd": {
+    "name": "Books D",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bookse": {
+    "name": "Books E",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "booksf": {
+    "name": "Books F",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksg": {
+    "name": "Books G",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "booksh": {
+    "name": "Books H",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksi": {
+    "name": "Books I",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "booksj": {
+    "name": "Books J",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "booksk": {
+    "name": "Books K",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "boozeaquarium": {
+    "name": "Booze Aquarium",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "bottle": {
+    "name": "Bottle",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bowlingball": {
+    "name": "Bowling Ball",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "bowlingpin": {
+    "name": "Bowling Pin",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "boxingbill": {
+    "name": "Boxing Bill",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "brainofglorg": {
+    "name": "Brain of Glorg",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 4,
+    "appeal": -4,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "branchvase": {
+    "name": "Branch Vase",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "brickblock": {
+    "name": "Brick Block",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B"
+    ]
+  },
+  "bricksa": {
+    "name": "Bricks A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "bricksb": {
+    "name": "Bricks B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "bricksc": {
+    "name": "Bricks C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "bricksd": {
+    "name": "Bricks D",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "broccoli": {
+    "name": "Broccoli",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "brokenjar": {
+    "name": "Broken Jar",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "broom": {
+    "name": "Broom",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "bunnymask": {
+    "name": "Bunny Mask",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "canofcathearts": {
+    "name": "Can of Cat Hearts",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "cardboardbox": {
+    "name": "Cardboard Box",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "catbed": {
+    "name": "Cat Bed",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P..P",
+      "PBBP",
+      "++++"
+    ]
+  },
+  "catbench": {
+    "name": "Cat Bench",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P..",
+      "PBB",
+      "+++"
+    ]
+  },
+  "catchair": {
+    "name": "Cat Chair",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P.P",
+      "PBP",
+      "+++"
+    ]
+  },
+  "catclock": {
+    "name": "Cat Clock",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "catcouch": {
+    "name": "Cat Couch",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P..P",
+      "PBBP",
+      "++++"
+    ]
+  },
+  "catdresser": {
+    "name": "Cat Dresser",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "PBP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "catshelf": {
+    "name": "Cat Shelf",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "SBBS",
+      "....",
+      "BBBB",
+      "P..P",
+      "++++"
+    ]
+  },
+  "cattv": {
+    "name": "Cat TV",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "PBP",
+      "+++"
+    ]
+  },
+  "cattablea": {
+    "name": "Cat Table A",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "cattableb": {
+    "name": "Cat Table B",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "PSSP",
+      "+SS+"
+    ]
+  },
+  "cattreea": {
+    "name": "Cat Tree A",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SB",
+      "BP",
+      "++"
+    ]
+  },
+  "cattreeb": {
+    "name": "Cat Tree B",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SB",
+      "B.",
+      "BB",
+      "++"
+    ]
+  },
+  "cattreec": {
+    "name": "Cat Tree C",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BS",
+      "PB",
+      "PP",
+      "++"
+    ]
+  },
+  "catfaceposter": {
+    "name": "Catface Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "catfishaquarium": {
+    "name": "Catfish Aquarium",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "catworkorangeposter": {
+    "name": "Catwork Orange Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "ceilingfan": {
+    "name": "Ceiling Fan",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SS+SS",
+      "PPPPP",
+      "SS.SS"
+    ]
+  },
+  "centerfold": {
+    "name": "Centerfold",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "centipede": {
+    "name": "Centipede",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "chameleon": {
+    "name": "Chameleon",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "chepurvaraposter": {
+    "name": "Che Purvara Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "cheese": {
+    "name": "Cheese",
+    "stim": 0,
+    "comfort": -1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "chest": {
+    "name": "Chest",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "chocolatecupcake": {
+    "name": "Chocolate Cupcake",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "christtheredeemerstatue": {
+    "name": "Christ the Redeemer Statue",
+    "stim": 0,
+    "comfort": -2,
+    "health": 2,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S.S",
+      "BBB",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "cinderblock": {
+    "name": "Cinderblock",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "cloud": {
+    "name": "Cloud",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B"
+    ]
+  },
+  "clyde": {
+    "name": "Clyde",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "coffin": {
+    "name": "Coffin",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "+PPS",
+      "+PPP",
+      "SPPP",
+      "SSPP",
+      "SS+S"
+    ]
+  },
+  "conchshell": {
+    "name": "Conch Shell",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "conjoinedcatinjar": {
+    "name": "Conjoined Cat in Jar",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "coughsyrup": {
+    "name": "Cough Syrup",
+    "stim": 0,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "cranegame": {
+    "name": "Crane Game",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "crate": {
+    "name": "Crate",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "crystalball": {
+    "name": "Crystal Ball",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "crystalchair": {
+    "name": "Crystal Chair",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "...",
+      "P.P",
+      "PBP",
+      "+S+"
+    ]
+  },
+  "crystalchandelier": {
+    "name": "Crystal Chandelier",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "S+S",
+      "S.S",
+      "...",
+      "BBB",
+      "S.S"
+    ]
+  },
+  "crystalcouch": {
+    "name": "Crystal Couch",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "S....S",
+      "B....B",
+      "PBBBBP",
+      "++++++"
+    ]
+  },
+  "crystaldressera": {
+    "name": "Crystal Dresser A",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+S+"
+    ]
+  },
+  "crystaldresserb": {
+    "name": "Crystal Dresser B",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "crystallamp": {
+    "name": "Crystal Lamp",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "B",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "crystalshelf": {
+    "name": "Crystal Shelf",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "BBBB",
+      "P..P",
+      "BBBB",
+      "P..P",
+      "BBBB",
+      "+SS+"
+    ]
+  },
+  "crystalsidetable": {
+    "name": "Crystal Side Table",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "crystaltable": {
+    "name": "Crystal Table",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "crystaltoilet": {
+    "name": "Crystal Toilet",
+    "stim": 0,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 4,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "cupcake": {
+    "name": "Cupcake",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "cutearmoire": {
+    "name": "Cute Armoire",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+S+"
+    ]
+  },
+  "cutebed": {
+    "name": "Cute Bed",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "....",
+      "....",
+      "BBBB",
+      "+SS+"
+    ]
+  },
+  "cutechair": {
+    "name": "Cute Chair",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      ".",
+      "B",
+      "+"
+    ]
+  },
+  "cutecoffeetable": {
+    "name": "Cute Coffee Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "cutecouch": {
+    "name": "Cute Couch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P...P",
+      "PBBBP",
+      "+SSS+"
+    ]
+  },
+  "cutedresser": {
+    "name": "Cute Dresser",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "cuteshelf": {
+    "name": "Cute Shelf",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      ".B",
+      "BB",
+      "++"
+    ]
+  },
+  "cutesidetablea": {
+    "name": "Cute Side Table A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "cutesidetableb": {
+    "name": "Cute Side Table B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "cutestool": {
+    "name": "Cute Stool",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "dvdplayer": {
+    "name": "DVD Player",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "daddylonglegs": {
+    "name": "Daddy Long Legs",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "darumastatue": {
+    "name": "Daruma Statue",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "deadrat": {
+    "name": "Dead Rat",
+    "stim": 3,
+    "comfort": 0,
+    "health": -1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "devilcatbobble": {
+    "name": "Devil Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "diamond": {
+    "name": "Diamond",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "digitalalarmclock": {
+    "name": "Digital Alarm Clock",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "discoball": {
+    "name": "Disco Ball",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "++",
+      "PP",
+      "PP"
+    ]
+  },
+  "dollhouse": {
+    "name": "Dollhouse",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "...",
+      "BBB",
+      "+++"
+    ]
+  },
+  "drawing": {
+    "name": "Drawing",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "dryer": {
+    "name": "Dryer",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "duckphone": {
+    "name": "Duck Phone",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "dukeoffliesplush": {
+    "name": "Duke of Flies Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "easel": {
+    "name": "Easel",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "B",
+      "+"
+    ]
+  },
+  "eggshells": {
+    "name": "Egg Shells",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "eggplant": {
+    "name": "Eggplant",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "elegantbed": {
+    "name": "Elegant Bed",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "SSS..SSS",
+      "S......S",
+      "P......P",
+      "PBBBBBBP",
+      "PPPPPPPP",
+      "++SSSS++"
+    ]
+  },
+  "elegantchair": {
+    "name": "Elegant Chair",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "elegantdesk": {
+    "name": "Elegant Desk",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "PSSP",
+      "+SS+"
+    ]
+  },
+  "elegantdressera": {
+    "name": "Elegant Dresser A",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "....",
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "elegantdresserb": {
+    "name": "Elegant Dresser B",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBBB",
+      "PPPPP",
+      "PPPPP",
+      "PPPPP",
+      "PPPPP",
+      "+S+S+"
+    ]
+  },
+  "elegantlamp": {
+    "name": "Elegant Lamp",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "elegantshelf": {
+    "name": "Elegant Shelf",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "....",
+      "....",
+      "BBBB",
+      "PPPP",
+      "+SS+"
+    ]
+  },
+  "elegantsidetablea": {
+    "name": "Elegant Side Table A",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "elegantsidetableb": {
+    "name": "Elegant Side Table B",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "eleganttable": {
+    "name": "Elegant Table",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "emptybottle": {
+    "name": "Empty Bottle",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "emptymilkcarton": {
+    "name": "Empty Milk Carton",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "erlenmeyerflask": {
+    "name": "Erlenmeyer Flask",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "etherealskull": {
+    "name": "Ethereal Skull",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 4,
+    "appeal": -4,
+    "shape_td": [
+      ".",
+      "B",
+      "+"
+    ]
+  },
+  "eyeball": {
+    "name": "Eyeball",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "fairyinajar": {
+    "name": "Fairy in a Jar",
+    "stim": 0,
+    "comfort": 1,
+    "health": 2,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "fetusinajar": {
+    "name": "Fetus in a Jar",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "fijimermaidaquarium": {
+    "name": "Fiji Mermaid Aquarium",
+    "stim": 1,
+    "comfort": -3,
+    "health": 0,
+    "mutation": 1,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "filingcabinet": {
+    "name": "Filing Cabinet",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "fireplace": {
+    "name": "Fireplace",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "...",
+      "...",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "fishoil": {
+    "name": "Fish Oil",
+    "stim": 0,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "flippedlblock": {
+    "name": "Flipped \"L\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "SB",
+      "SB",
+      "+."
+    ]
+  },
+  "flowervase": {
+    "name": "Flower Vase",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "fortuneteller": {
+    "name": "Fortuneteller",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "framedamericangothic": {
+    "name": "Framed American Gothic",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "framedblueboy": {
+    "name": "Framed Blue Boy",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "framedcreationofadam": {
+    "name": "Framed Creation of Adam",
+    "stim": 0,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "PPPP",
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "framedfrida": {
+    "name": "Framed Frida",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "framedkeithharing": {
+    "name": "Framed Keith Haring",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "framedmonalisa": {
+    "name": "Framed Mona Lisa",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "framedpicasso": {
+    "name": "Framed Picasso",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "framedsailboat": {
+    "name": "Framed Sailboat",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "framedstarrynight": {
+    "name": "Framed Starry Night",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PPPP",
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "framedthepearl": {
+    "name": "Framed The Pearl",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "framedthescream": {
+    "name": "Framed The Scream",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "furnace": {
+    "name": "Furnace",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "gamesystem": {
+    "name": "Game System",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "gamepad": {
+    "name": "Gamepad",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "gastank": {
+    "name": "Gas Tank",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".",
+      "B",
+      "+"
+    ]
+  },
+  "gishplush": {
+    "name": "Gish Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "glassbottle": {
+    "name": "Glass Bottle",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "glowingbottle": {
+    "name": "Glowing Bottle",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "gnome": {
+    "name": "Gnome",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "grandfatherclock": {
+    "name": "Grandfather Clock",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "guardianlionstatue": {
+    "name": "Guardian Lion Statue",
+    "stim": 2,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "SP.PS",
+      "SPBPS",
+      ".PPP.",
+      ".PPP.",
+      "S+++S"
+    ]
+  },
+  "guppycatbobble": {
+    "name": "Guppy Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "guppyplush": {
+    "name": "Guppy Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "gutslampa": {
+    "name": "Guts Lamp A",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "gutslampb": {
+    "name": "Guts Lamp B",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "gutsshelf": {
+    "name": "Guts Shelf",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "gutssidetablea": {
+    "name": "Guts Side Table A",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "gutssidetableb": {
+    "name": "Guts Side Table B",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "gutssink": {
+    "name": "Guts Sink",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "S.S",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "gutstv": {
+    "name": "Guts TV",
+    "stim": 2,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "gutstable": {
+    "name": "Guts Table",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BBBB",
+      "PSSP",
+      "+SS+"
+    ]
+  },
+  "gutstoilet": {
+    "name": "Guts Toilet",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "ham": {
+    "name": "Ham",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "hanginthereposter": {
+    "name": "Hang in There Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "hangingairfouler": {
+    "name": "Hanging Air Fouler",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "+",
+      ".",
+      ".",
+      "P"
+    ]
+  },
+  "hangingairfreshenera": {
+    "name": "Hanging Airfreshener A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "+",
+      ".",
+      ".",
+      "P"
+    ]
+  },
+  "hangingairfreshenerb": {
+    "name": "Hanging Airfreshener B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "+",
+      ".",
+      "P"
+    ]
+  },
+  "hangingcage": {
+    "name": "Hanging Cage",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "++",
+      "..",
+      "..",
+      "BB",
+      "..",
+      "BB"
+    ]
+  },
+  "happycatbobble": {
+    "name": "Happy Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "headinjara": {
+    "name": "Head In Jar A",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "headinjarb": {
+    "name": "Head In Jar B",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "heartballoon": {
+    "name": "Heart Balloon",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "heartinajar": {
+    "name": "Heart in a Jar",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "hockeymask": {
+    "name": "Hockey Mask",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "iv": {
+    "name": "IV",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "icechest": {
+    "name": "Ice Chest",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "indiearcade": {
+    "name": "Indie Arcade",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "infamousmask": {
+    "name": "Infamous Mask",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "inky": {
+    "name": "Inky",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "iron": {
+    "name": "Iron",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "ironingboard": {
+    "name": "Ironing Board",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "irritablecatbobble": {
+    "name": "Irritable Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "isaacplush": {
+    "name": "Isaac Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jarofdiseases": {
+    "name": "Jar of Diseases",
+    "stim": 2,
+    "comfort": 0,
+    "health": -6,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jarofeggs": {
+    "name": "Jar of Eggs",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "jarofeyeballs": {
+    "name": "Jar of Eyeballs",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jarofflies": {
+    "name": "Jar of Flies",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jarofguppies": {
+    "name": "Jar of Guppies",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jarofnails": {
+    "name": "Jar of Nails",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jarofpennies": {
+    "name": "Jar of Pennies",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jollyroger": {
+    "name": "Jolly Roger",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "joystick": {
+    "name": "Joystick",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "jug": {
+    "name": "Jug",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "junkbed": {
+    "name": "Junk Bed",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBBBBB",
+      "PPSSPP",
+      "PPSSPP",
+      "++SS++"
+    ]
+  },
+  "junkcabinet": {
+    "name": "Junk Cabinet",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".BBS",
+      "B..S",
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "junkchair": {
+    "name": "Junk Chair",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SPB",
+      "BBB",
+      "+++"
+    ]
+  },
+  "junkdresser": {
+    "name": "Junk Dresser",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "S.BB",
+      "BBBB",
+      "....",
+      "BBBB",
+      "++++"
+    ]
+  },
+  "junklamp": {
+    "name": "Junk Lamp",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "junkshelf": {
+    "name": "Junk Shelf",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBBB",
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "junksidetable": {
+    "name": "Junk Side Table",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "junktv": {
+    "name": "Junk TV",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "S..",
+      "PBB",
+      "PBB",
+      "+++"
+    ]
+  },
+  "junktoilet": {
+    "name": "Junk Toilet",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "kettle": {
+    "name": "Kettle",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "knocker": {
+    "name": "Knocker",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "labjuga": {
+    "name": "Lab Jug A",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "labjugb": {
+    "name": "Lab Jug B",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "labtanka": {
+    "name": "Lab Tank A",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "labtankb": {
+    "name": "Lab Tank B",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "laptop": {
+    "name": "Laptop",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "largeeasterislandhead": {
+    "name": "Large Easter Island Head",
+    "stim": 3,
+    "comfort": -4,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 3,
+    "shape_td": [
+      "PBP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "largeemptyvase": {
+    "name": "Large Empty Vase",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "laughingbuddhastatue": {
+    "name": "Laughing Buddha Statue",
+    "stim": 2,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "SBS",
+      "PPP",
+      "+++"
+    ]
+  },
+  "lavalamp": {
+    "name": "Lava Lamp",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "layingiblock": {
+    "name": "Laying \"I\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB"
+    ]
+  },
+  "layinglblock": {
+    "name": "Laying \"L\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "BSS",
+      ".++"
+    ]
+  },
+  "lemon": {
+    "name": "Lemon",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "letterblock": {
+    "name": "Letter Block",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "lightswitch": {
+    "name": "Light Switch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "lipsphone": {
+    "name": "Lips Phone",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "litterheadposter": {
+    "name": "Litterhead Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "log": {
+    "name": "Log",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "lonelycatbobble": {
+    "name": "Lonely Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "lordshivastatue": {
+    "name": "Lord Shiva Statue",
+    "stim": 2,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "SPS",
+      "PPP",
+      "P.P",
+      "BBB",
+      "+++"
+    ]
+  },
+  "lotion": {
+    "name": "Lotion",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "luckycatbobble": {
+    "name": "Lucky Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "mandrakeroot": {
+    "name": "Mandrake Root",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "manekinekostatue": {
+    "name": "Maneki Neko Statue",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "masonjar": {
+    "name": "Mason Jar",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "mattress": {
+    "name": "Mattress",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".SSS",
+      "BBBB",
+      "++++"
+    ]
+  },
+  "medicaljar": {
+    "name": "Medical Jar",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "mediumeasterislandhead": {
+    "name": "Medium Easter Island Head",
+    "stim": 2,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "meowbeyposter": {
+    "name": "Meowbey Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "metalplatea": {
+    "name": "Metal Plate A",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "metalplateb": {
+    "name": "Metal Plate B",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "metalplatec": {
+    "name": "Metal Plate C",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "microwavea": {
+    "name": "Microwave A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "microwaveb": {
+    "name": "Microwave B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "microwavec": {
+    "name": "Microwave C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "milkjug": {
+    "name": "Milk Jug",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "mirror": {
+    "name": "Mirror",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "modernbed": {
+    "name": "Modern Bed",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "......",
+      "......",
+      "BBBBBB",
+      "BPPPPB",
+      "+SSSS+"
+    ]
+  },
+  "modernchair": {
+    "name": "Modern Chair",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "S.S",
+      "P.P",
+      "PBP",
+      "+++"
+    ]
+  },
+  "moderncouch": {
+    "name": "Modern Couch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P....P",
+      "PBBBBP",
+      "++SS++"
+    ]
+  },
+  "moderndesk": {
+    "name": "Modern Desk",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "PSSP",
+      "+SS+"
+    ]
+  },
+  "moderndresser": {
+    "name": "Modern Dresser",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "+S+"
+    ]
+  },
+  "modernfridge": {
+    "name": "Modern Fridge",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "modernsidetable": {
+    "name": "Modern Side Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "modernstove": {
+    "name": "Modern Stove",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "moderntv": {
+    "name": "Modern TV",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "BBB"
+    ]
+  },
+  "moderntable": {
+    "name": "Modern Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "+++"
+    ]
+  },
+  "monsterchair": {
+    "name": "Monster Chair",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "monsterdresser": {
+    "name": "Monster Dresser",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "monsterlamp": {
+    "name": "Monster Lamp",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "B",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "monstershelf": {
+    "name": "Monster Shelf",
+    "stim": 2,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BBB",
+      "...",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "monstersidetable": {
+    "name": "Monster Side Table",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "monstertv": {
+    "name": "Monster TV",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "monstertablea": {
+    "name": "Monster Table A",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "BBB",
+      "PSP",
+      "+S+"
+    ]
+  },
+  "monstertableb": {
+    "name": "Monster Table B",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "mouse": {
+    "name": "Mouse",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "mug": {
+    "name": "Mug",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "mushroomchair": {
+    "name": "Mushroom Chair",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "mushroomshelf": {
+    "name": "Mushroom Shelf",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BS",
+      ".B",
+      "B.",
+      "PB",
+      "++"
+    ]
+  },
+  "mushroomstoola": {
+    "name": "Mushroom Stool A",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "mushroomstoolb": {
+    "name": "Mushroom Stool B",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "mushroomstoolc": {
+    "name": "Mushroom Stool C",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "mushroomtablea": {
+    "name": "Mushroom Table A",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "mushroomtableb": {
+    "name": "Mushroom Table B",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "SPS",
+      "S+S"
+    ]
+  },
+  "mushroomtoilet": {
+    "name": "Mushroom Toilet",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "mysterymedicine": {
+    "name": "Mystery Medicine",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "newspapersa": {
+    "name": "Newspapers A",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "newspapersb": {
+    "name": "Newspapers B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "octocataquarium": {
+    "name": "Octocat Aquarium",
+    "stim": 2,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 3,
+    "shape_td": [
+      "BBBB",
+      "PPPP",
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "oldtoast": {
+    "name": "Old Toast",
+    "stim": 0,
+    "comfort": -1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "olmechead": {
+    "name": "Olmec Head",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "onion": {
+    "name": "Onion",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "oozecanister": {
+    "name": "Ooze Canister",
+    "stim": 0,
+    "comfort": 0,
+    "health": -1,
+    "mutation": 2,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "orange": {
+    "name": "Orange",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "outhouse": {
+    "name": "Outhouse",
+    "stim": 0,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "outlet": {
+    "name": "Outlet",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pc": {
+    "name": "PC",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "P",
+      "+"
+    ]
+  },
+  "pcmonitor": {
+    "name": "PC Monitor",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "pawsposter": {
+    "name": "Paws Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "pencup": {
+    "name": "Pen Cup",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "perfume": {
+    "name": "Perfume",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "photoa": {
+    "name": "Photo A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "photob": {
+    "name": "Photo B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "photos": {
+    "name": "Photos",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "piggybank": {
+    "name": "Piggy Bank",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pillbottle": {
+    "name": "Pill Bottle",
+    "stim": 0,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pillbug": {
+    "name": "Pillbug",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pineapple": {
+    "name": "Pineapple",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pinky": {
+    "name": "Pinky",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pintjar": {
+    "name": "Pint Jar",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "plasmaorb": {
+    "name": "Plasma Orb",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "poem": {
+    "name": "Poem",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "poop": {
+    "name": "Poop",
+    "stim": 0,
+    "comfort": -2,
+    "health": -2,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": null
+  },
+  "potopotty": {
+    "name": "Pot O' Potty",
+    "stim": 0,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "potato": {
+    "name": "Potato",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pottedbluebulb": {
+    "name": "Potted Blue Bulb",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedboxwood": {
+    "name": "Potted Boxwood",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "...",
+      ".B.",
+      "SPS",
+      "SBS",
+      "S+S"
+    ]
+  },
+  "pottedcactuar": {
+    "name": "Potted Cactuar",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedcactus": {
+    "name": "Potted Cactus",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "potteddaisy": {
+    "name": "Potted Daisy",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "potteddracaena": {
+    "name": "Potted Dracaena",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "...",
+      "...",
+      "SBS",
+      "S+S"
+    ]
+  },
+  "pottedgreenbulb": {
+    "name": "Potted Green Bulb",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedmonstera": {
+    "name": "Potted Monstera",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "pottedmushroom": {
+    "name": "Potted Mushroom",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pottedmushrooms": {
+    "name": "Potted Mushrooms",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedorchid": {
+    "name": "Potted Orchid",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedpiranhaplant": {
+    "name": "Potted Piranha Plant",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedpotato": {
+    "name": "Potted Potato",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedrafflesia": {
+    "name": "Potted Rafflesia",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "pottedsunflower": {
+    "name": "Potted Sunflower",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "pottedtentacle": {
+    "name": "Potted Tentacle",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "pottedyellowbulb": {
+    "name": "Potted Yellow Bulb",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "printer": {
+    "name": "Printer",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "pumpkin": {
+    "name": "Pumpkin",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "questionblock": {
+    "name": "Question Block",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B"
+    ]
+  },
+  "radish": {
+    "name": "Radish",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "redcandlea": {
+    "name": "Red Candle A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "redcandleb": {
+    "name": "Red Candle B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "retrobath": {
+    "name": "Retro Bath",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SSS.",
+      "BBBB",
+      "++++"
+    ]
+  },
+  "retrohandradio": {
+    "name": "Retro Hand Radio",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "retrophonea": {
+    "name": "Retro Phone A",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "ringbell": {
+    "name": "Ring Bell",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "roboarms": {
+    "name": "Robo Arms",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PBBP",
+      "PSSP",
+      "++++"
+    ]
+  },
+  "robobody": {
+    "name": "Robo Body",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "robochest": {
+    "name": "Robo Chest",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB"
+    ]
+  },
+  "robodesk": {
+    "name": "Robo Desk",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "robodresser": {
+    "name": "Robo Dresser",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "robohead": {
+    "name": "Robo Head",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "roboplate": {
+    "name": "Robo Plate",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "roboshelf": {
+    "name": "Robo Shelf",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "...",
+      "BBB",
+      "BBB",
+      "+++"
+    ]
+  },
+  "robosink": {
+    "name": "Robo Sink",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "S.S",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "robotv": {
+    "name": "Robo TV",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "robotable": {
+    "name": "Robo Table",
+    "stim": 3,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SSS.",
+      "BBBB",
+      "P..P",
+      "+SS+"
+    ]
+  },
+  "rock": {
+    "name": "Rock",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "rosieposter": {
+    "name": "Rosie Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "rotaryphoneb": {
+    "name": "Rotary Phone B",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "rotaryphonec": {
+    "name": "Rotary Phone C",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "roundbottomflask": {
+    "name": "Round Bottom Flask",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "rubberduck": {
+    "name": "Rubber Duck",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "rusticbench": {
+    "name": "Rustic Bench",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "...",
+      "BBB",
+      "+S+"
+    ]
+  },
+  "rusticchair": {
+    "name": "Rustic Chair",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S.S",
+      "...",
+      ".B.",
+      "S+S"
+    ]
+  },
+  "rusticdesk": {
+    "name": "Rustic Desk",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "rusticdresser": {
+    "name": "Rustic Dresser",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "rusticsidetable": {
+    "name": "Rustic Side Table",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "rusticstool": {
+    "name": "Rustic Stool",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "rustictable": {
+    "name": "Rustic Table",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "PSSP",
+      "+SS+"
+    ]
+  },
+  "safe": {
+    "name": "Safe",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "sausage": {
+    "name": "Sausage",
+    "stim": 0,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "sewerchair": {
+    "name": "Sewer Chair",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "sewerdresser": {
+    "name": "Sewer Dresser",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "sewerlamp": {
+    "name": "Sewer Lamp",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "..",
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "sewerpipesa": {
+    "name": "Sewer Pipes A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PSS",
+      "PPP",
+      "+++"
+    ]
+  },
+  "sewerpipesb": {
+    "name": "Sewer Pipes B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "SSP",
+      "PPP",
+      "SSP",
+      "+++"
+    ]
+  },
+  "sewerpipesc": {
+    "name": "Sewer Pipes C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "SP",
+      "++"
+    ]
+  },
+  "sewershelf": {
+    "name": "Sewer Shelf",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "BBBB",
+      "....",
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "sewersink": {
+    "name": "Sewer Sink",
+    "stim": 1,
+    "comfort": 0,
+    "health": -1,
+    "mutation": 1,
+    "appeal": 1,
+    "shape_td": [
+      "....",
+      "BBBB",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "sewersmalltable": {
+    "name": "Sewer Small Table",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "sewerstool": {
+    "name": "Sewer Stool",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      ".",
+      "B",
+      "+"
+    ]
+  },
+  "sewertv": {
+    "name": "Sewer TV",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "..",
+      "PP",
+      "++"
+    ]
+  },
+  "sewertable": {
+    "name": "Sewer Table",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "sewnchair": {
+    "name": "Sewn Chair",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".",
+      "B",
+      "+"
+    ]
+  },
+  "sewnclock": {
+    "name": "Sewn Clock",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "sewncouch": {
+    "name": "Sewn Couch",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P..P",
+      "PBBP",
+      "++++"
+    ]
+  },
+  "sewndoll": {
+    "name": "Sewn Doll",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "sewndresser": {
+    "name": "Sewn Dresser",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "sewnsidetable": {
+    "name": "Sewn Side Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "sewnstoola": {
+    "name": "Sewn Stool A",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "sewnstoolb": {
+    "name": "Sewn Stool B",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "sewntv": {
+    "name": "Sewn TV",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "BB",
+      "++"
+    ]
+  },
+  "sewntable": {
+    "name": "Sewn Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "sewntoilet": {
+    "name": "Sewn Toilet",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "shower": {
+    "name": "Shower",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBB",
+      "PPP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "shrunkencathead": {
+    "name": "Shrunken Cat Head",
+    "stim": 0,
+    "comfort": 0,
+    "health": -5,
+    "mutation": 1,
+    "appeal": 0,
+    "shape_td": [
+      "+",
+      "P",
+      "P"
+    ]
+  },
+  "sidewaystblock": {
+    "name": "Sideways \"T\" Block",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BS",
+      "BB",
+      "BS",
+      ".+"
+    ]
+  },
+  "silenceofthemiceposter": {
+    "name": "Silence of the Mice Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "sink": {
+    "name": "Sink",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "smallasteroid": {
+    "name": "Small Asteroid",
+    "stim": 2,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallbeaker": {
+    "name": "Small Beaker",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallbrokenbottle": {
+    "name": "Small Broken Bottle",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallcinderblock": {
+    "name": "Small Cinderblock",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smalleasterislandhead": {
+    "name": "Small Easter Island Head",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "smallfan": {
+    "name": "Small Fan",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "smallgem": {
+    "name": "Small Gem",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallgoldfishaquarium": {
+    "name": "Small Goldfish Aquarium",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smallminnowaquarium": {
+    "name": "Small Minnow Aquarium",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smallminnowfamilyaquarium": {
+    "name": "Small Minnow Family Aquarium",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smallpictureframea": {
+    "name": "Small Picture Frame A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallpictureframeb": {
+    "name": "Small Picture Frame B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallpictureframec": {
+    "name": "Small Picture Frame C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallpillbottle": {
+    "name": "Small Pill Bottle",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallpoopaquarium": {
+    "name": "Small Poop Aquarium",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smallredcandlea": {
+    "name": "Small Red Candle A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallredcandleb": {
+    "name": "Small Red Candle B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallrock": {
+    "name": "Small Rock",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallskullaquarium": {
+    "name": "Small Skull Aquarium",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smallsnowglobe": {
+    "name": "Small Snowglobe",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallspeaker": {
+    "name": "Small Speaker",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smalltadpoleaquarium": {
+    "name": "Small Tadpole Aquarium",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "+"
+    ]
+  },
+  "smallvasea": {
+    "name": "Small Vase A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallvaseb": {
+    "name": "Small Vase B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallvasec": {
+    "name": "Small Vase C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallwhitecandlea": {
+    "name": "Small White Candle A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "smallwhitecandleb": {
+    "name": "Small White Candle B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "sodacan": {
+    "name": "Soda Can",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "sodacans": {
+    "name": "Soda Cans",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "soupcup": {
+    "name": "Soup Cup",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "speaker": {
+    "name": "Speaker",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "spiderbed": {
+    "name": "Spider Bed",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBBBB",
+      "P....P",
+      "P....P",
+      "BBBBBB",
+      "++SS++"
+    ]
+  },
+  "spidercandelabra": {
+    "name": "Spider Candelabra",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S..S",
+      ".PP.",
+      "SPPS",
+      "SPPS",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "spiderchair": {
+    "name": "Spider Chair",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "SPS",
+      "PSP",
+      "PSP",
+      "PBP",
+      "+S+"
+    ]
+  },
+  "spiderdresser": {
+    "name": "Spider Dresser",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "spidershelf": {
+    "name": "Spider Shelf",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "P..P",
+      "BBBB",
+      "P..P",
+      "BBBB",
+      "++++"
+    ]
+  },
+  "spidersidetable": {
+    "name": "Spider Side Table",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "spidertv": {
+    "name": "Spider TV",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "spidertable": {
+    "name": "Spider Table",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "S++S"
+    ]
+  },
+  "spidertoilet": {
+    "name": "Spider Toilet",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "spidervanity": {
+    "name": "Spider Vanity",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "S..S",
+      "S..S",
+      "PBBP",
+      "SBBS",
+      "S++S"
+    ]
+  },
+  "spottycatbobble": {
+    "name": "Spotty Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "squash": {
+    "name": "Squash",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "stacyplush": {
+    "name": "Stacy Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "stevenplush": {
+    "name": "Steven Plush",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "suspended90scabinet": {
+    "name": "Suspended 90s Cabinet",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBBBBB",
+      "PPSSPP",
+      "++++++"
+    ]
+  },
+  "suspended90sshelf": {
+    "name": "Suspended 90s Shelf",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "SP",
+      "++"
+    ]
+  },
+  "suspendedangelicshelf": {
+    "name": "Suspended Angelic Shelf",
+    "stim": -2,
+    "comfort": 1,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBBB",
+      "SPPS",
+      "++++"
+    ]
+  },
+  "suspendedcatshelf": {
+    "name": "Suspended Cat Shelf",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BB"
+    ]
+  },
+  "suspendedgutsshelf": {
+    "name": "Suspended Guts Shelf",
+    "stim": 1,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": -1,
+    "shape_td": [
+      "+S+",
+      ".S.",
+      ".S.",
+      "BBB"
+    ]
+  },
+  "suspendedjunkshelf": {
+    "name": "Suspended Junk Shelf",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "++.+",
+      "....",
+      "....",
+      "..BB",
+      "BBBB"
+    ]
+  },
+  "suspendedmonstershelfa": {
+    "name": "Suspended Monster Shelf A",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "....",
+      "BBBB"
+    ]
+  },
+  "suspendedmonstershelfb": {
+    "name": "Suspended Monster Shelf B",
+    "stim": 1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -2,
+    "shape_td": [
+      "BBBB",
+      "SSSP",
+      "++++"
+    ]
+  },
+  "suspendedmushroomshelfa": {
+    "name": "Suspended Mushroom Shelf A",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB"
+    ]
+  },
+  "suspendedmushroomshelfb": {
+    "name": "Suspended Mushroom Shelf B",
+    "stim": -1,
+    "comfort": 3,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "...",
+      "BBB"
+    ]
+  },
+  "suspendedrusticshelfa": {
+    "name": "Suspended Rustic Shelf A",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "BBB",
+      "...",
+      "BBB"
+    ]
+  },
+  "suspendedrusticshelfb": {
+    "name": "Suspended Rustic Shelf B",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "...",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "suspendedrusticspicerack": {
+    "name": "Suspended Rustic Spice Rack",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "...",
+      "BBB"
+    ]
+  },
+  "suspendedsewershelf": {
+    "name": "Suspended Sewer Shelf",
+    "stim": 4,
+    "comfort": -1,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      ".S.",
+      ".S.",
+      "BBB",
+      ".+."
+    ]
+  },
+  "suspendedwoodenshelf": {
+    "name": "Suspended Wooden Shelf",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB"
+    ]
+  },
+  "synjcatbobble": {
+    "name": "Synj Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "tadpoleaquarium": {
+    "name": "Tadpole Aquarium",
+    "stim": 1,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "tadpoleinajar": {
+    "name": "Tadpole in a Jar",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "tallmug": {
+    "name": "Tall Mug",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermybass": {
+    "name": "Taxidermy Bass",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "taxidermybat": {
+    "name": "Taxidermy Bat",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "taxidermybear": {
+    "name": "Taxidermy Bear",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 2,
+    "appeal": 1,
+    "shape_td": [
+      "SSB",
+      "PBP",
+      "PPP",
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "taxidermybugs": {
+    "name": "Taxidermy Bugs",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "taxidermycod": {
+    "name": "Taxidermy Cod",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "taxidermycrow": {
+    "name": "Taxidermy Crow",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermydeer": {
+    "name": "Taxidermy Deer",
+    "stim": 0,
+    "comfort": 0,
+    "health": -1,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "taxidermygopher": {
+    "name": "Taxidermy Gopher",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermyguppy": {
+    "name": "Taxidermy Guppy",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 1,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermyiguana": {
+    "name": "Taxidermy Iguana",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermymouse": {
+    "name": "Taxidermy Mouse",
+    "stim": 1,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermypig": {
+    "name": "Taxidermy Pig",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "taxidermypigeon": {
+    "name": "Taxidermy Pigeon",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermyrat": {
+    "name": "Taxidermy Rat",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermysnake": {
+    "name": "Taxidermy Snake",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermysquirrel": {
+    "name": "Taxidermy Squirrel",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "taxidermyturtle": {
+    "name": "Taxidermy Turtle",
+    "stim": 0,
+    "comfort": 0,
+    "health": -2,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "testtube": {
+    "name": "Test Tube",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "testtubes": {
+    "name": "Test Tubes",
+    "stim": 0,
+    "comfort": -1,
+    "health": 0,
+    "mutation": 1,
+    "appeal": -1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "thelittlemermaidstatue": {
+    "name": "The Little Mermaid Statue",
+    "stim": 2,
+    "comfort": -2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 2,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "tissues": {
+    "name": "Tissues",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "tonettamask": {
+    "name": "Tonetta Mask",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toolchest": {
+    "name": "Tool Chest",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "torch": {
+    "name": "Torch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".",
+      "P",
+      "+"
+    ]
+  },
+  "toxicwaste": {
+    "name": "Toxic Waste",
+    "stim": 0,
+    "comfort": -4,
+    "health": 0,
+    "mutation": 2,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "toybed": {
+    "name": "Toy Bed",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toycouch": {
+    "name": "Toy Couch",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toycrate": {
+    "name": "Toy Crate",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toyfridge": {
+    "name": "Toy Fridge",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toyshelf": {
+    "name": "Toy Shelf",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toysink": {
+    "name": "Toy Sink",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toystove": {
+    "name": "Toy Stove",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "toytable": {
+    "name": "Toy Table",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "turkey": {
+    "name": "Turkey",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "ufoposter": {
+    "name": "UFO Poster",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "vhsplayer": {
+    "name": "VHS Player",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "vacuum": {
+    "name": "Vacuum",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "vaseofdaisies": {
+    "name": "Vase of Daisies",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "venusflytrap": {
+    "name": "Venus Flytrap",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "visibleman": {
+    "name": "Visible Man",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "walkytalkie": {
+    "name": "Walky-Talkie",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "wallsafe": {
+    "name": "Wall Safe",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "wallmountedtv": {
+    "name": "Wall-Mounted TV",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PPP",
+      "PPP",
+      "+++"
+    ]
+  },
+  "wallmountedcowskull": {
+    "name": "Wallmounted Cow Skull",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "++"
+    ]
+  },
+  "washer": {
+    "name": "Washer",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "..",
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "waterbottle": {
+    "name": "Water Bottle",
+    "stim": 0,
+    "comfort": 0,
+    "health": 1,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      ".",
+      "P",
+      "+"
+    ]
+  },
+  "watercooler": {
+    "name": "Water Cooler",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "B",
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "whitecandlea": {
+    "name": "White Candle A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "whitecandleb": {
+    "name": "White Candle B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "wobblebird": {
+    "name": "Wobble Bird",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "woodtable": {
+    "name": "Wood Table",
+    "stim": 0,
+    "comfort": 2,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BBBBB",
+      "P...P",
+      "+SSS+"
+    ]
+  },
+  "woodenboardsa": {
+    "name": "Wooden Boards A",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "woodenboardsb": {
+    "name": "Wooden Boards B",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PP",
+      "++"
+    ]
+  },
+  "woodenboardsc": {
+    "name": "Wooden Boards C",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "woodenboardsd": {
+    "name": "Wooden Boards D",
+    "stim": 0,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "PPPP",
+      "PPPP",
+      "++++"
+    ]
+  },
+  "woodenchair": {
+    "name": "Wooden Chair",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P.P",
+      "PBP",
+      "+++"
+    ]
+  },
+  "woodenclock": {
+    "name": "Wooden Clock",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "woodendresser": {
+    "name": "Wooden Dresser",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BB",
+      "PP",
+      "++"
+    ]
+  },
+  "woodenlamp": {
+    "name": "Wooden Lamp",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "PP",
+      "PP",
+      "SP",
+      "S+"
+    ]
+  },
+  "woodenshelfa": {
+    "name": "Wooden Shelf A",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBB",
+      "...",
+      "BBB",
+      "+++"
+    ]
+  },
+  "woodenshelfb": {
+    "name": "Wooden Shelf B",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "....",
+      "BBBB",
+      "BBBB"
+    ]
+  },
+  "woodensink": {
+    "name": "Wooden Sink",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "...",
+      "BBB",
+      "PPP",
+      "+++"
+    ]
+  },
+  "woodentv": {
+    "name": "Wooden TV",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "woodentable": {
+    "name": "Wooden Table",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "BBBB",
+      "PSSP",
+      "+SS+"
+    ]
+  },
+  "woodentoilet": {
+    "name": "Wooden Toilet",
+    "stim": 1,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "..",
+      "BB",
+      "++"
+    ]
+  },
+  "zombiecatbobble": {
+    "name": "Zombie Cat Bobble",
+    "stim": -1,
+    "comfort": 1,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 1,
+    "shape_td": [
+      "P",
+      "+"
+    ]
+  },
+  "foodbox": {
+    "name": "Food Box",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "BB",
+      "++"
+    ]
+  },
+  "idolofcomfort": {
+    "name": "Idol of Comfort",
+    "stim": 0,
+    "comfort": 5,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "idolofstimulation": {
+    "name": "Idol of Stimulation",
+    "stim": 5,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "idolofhealth": {
+    "name": "Idol of Health",
+    "stim": 0,
+    "comfort": 0,
+    "health": 5,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "idolofevolution": {
+    "name": "Idol of Evolution",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 5,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "idolofappeal": {
+    "name": "Idol of Appeal",
+    "stim": 0,
+    "comfort": 0,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 5,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "idolofchastity": {
+    "name": "Idol of Chastity",
+    "stim": 0,
+    "comfort": 5,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  },
+  "idolofchaos": {
+    "name": "Idol of Chaos",
+    "stim": 0,
+    "comfort": -5,
+    "health": 0,
+    "mutation": 0,
+    "appeal": 0,
+    "shape_td": [
+      "P",
+      "P",
+      "+"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-11-21 16:45:57",
+  "stage": "ENDGAME_MUTATION_SKILLS",
+  "room_stim_used": 33,
+  "retired_defenders": [
+    {
+      "id": 864,
+      "name": "Jeritza",
+      "combat_sum": 41,
+      "score": 227.3
+    },
+    {
+      "id": 869,
+      "name": "Damocles",
+      "combat_sum": 40,
+      "score": 221.1
+    },
+    {
+      "id": 866,
+      "name": "Piki",
+      "combat_sum": 39,
+      "score": 220.9
+    },
+    {
+      "id": 861,
+      "name": "Pablo Meowscabar",
+      "combat_sum": 39,
+      "score": 209.0
+    }
+  ],
+  "adventure_squad": [],
+  "primary_pairs": [
+    {
+      "cat_a": "Piki",
+      "cat_b": "Simon",
+      "coi": 0.0,
+      "expected_sum": 36.7,
+      "expected_7s": 3.71
+    },
+    {
+      "cat_a": "Damocles",
+      "cat_b": "Miu",
+      "coi": 0.1168,
+      "expected_sum": 40.2,
+      "expected_7s": 4.63
+    }
+  ],
+  "notes": []
+}

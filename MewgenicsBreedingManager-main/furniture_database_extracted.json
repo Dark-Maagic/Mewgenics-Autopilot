@@ -1,0 +1,3169 @@
+{
+  "object_bed": {
+    "name": "Pet Bed",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 2,
+    "shape_matrix_top_down": [
+      "BB",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_80s_table": {
+    "name": "80s Table",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 2,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_cinderblock1": {
+    "name": "Cinderblock",
+    "anchor_type": "stackable",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 1,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "P",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_junk_paper1": {
+    "name": "Newspapers A",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 6,
+    "shape_matrix_top_down": [
+      "BBB",
+      "BBB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_cattree1": {
+    "name": "Cat Tree A",
+    "anchor_type": "floor_base",
+    "can_flip": true,
+    "occupied_w_h": [
+      2,
+      4
+    ],
+    "occupied_tiles": 7,
+    "anchor_point_nodes": 5,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "P.",
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_trash_cans": {
+    "name": "Soda Cans",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_mushroom_stool3": {
+    "name": "Mushroom Stool C",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": -1,
+      "comfort": 3,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_modern_chair": {
+    "name": "Modern Chair",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "special_foodbox": {
+    "name": "Food Storage Box",
+    "anchor_type": "stackable",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_meds_coughsyrup": {
+    "name": "Cough Syrup",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 1,
+      "mutation": 0,
+      "appeal": -1
+    }
+  },
+  "set_angelic_lamp": {
+    "name": "Angelic Lamp",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": -2,
+      "comfort": 1,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "set_90s_frige": {
+    "name": "90s Fridge",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      4
+    ],
+    "occupied_tiles": 8,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "SS",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_picture_photo": {
+    "name": "Photo A",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_wooden_tv": {
+    "name": "Wooden TV",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_electronics_speaker": {
+    "name": "Speaker",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_safe": {
+    "name": "Wall Safe",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "wallmounted_ghost3": {
+    "name": "Clyde",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_block_square": {
+    "name": "\"O\" Block",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_80s_chair": {
+    "name": "80s Chair",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 2,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_trash_brokenbottle": {
+    "name": "Small Broken Bottle",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_junk_toilet": {
+    "name": "Junk Toilet",
+    "anchor_type": "floor_base",
+    "can_flip": true,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 1,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B.",
+      "PS",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_jar_eggs": {
+    "name": "Jar of Eggs",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_plant_mushroom": {
+    "name": "Potted Mushroom",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_electronics_gamepad": {
+    "name": "Gamepad",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_wooden_boards1": {
+    "name": "Wooden Boards A",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_bone_sidetable": {
+    "name": "Bone Side Table",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "object_fishtank_mermaid": {
+    "name": "Fiji Mermaid Aquarium",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -3,
+      "health": 0,
+      "mutation": 1,
+      "appeal": 0
+    }
+  },
+  "set_mushroom_shelf": {
+    "name": "Mushroom Shelf",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": -1,
+      "comfort": 3,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_vase1": {
+    "name": "Small Vase A",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_food_sausage": {
+    "name": "Sausage",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_vase_sticks": {
+    "name": "Branch Vase",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_wooden_dresser": {
+    "name": "Wooden Dresser",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_vase2": {
+    "name": "Small Vase B",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "special_evolutionidol": {
+    "name": "Idol of Evolution",
+    "anchor_type": "idol",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 5,
+      "appeal": 0
+    }
+  },
+  "set_elegant_table": {
+    "name": "Elegant Table",
+    "anchor_type": "floor_base",
+    "can_flip": true,
+    "occupied_w_h": [
+      4,
+      2
+    ],
+    "occupied_tiles": 8,
+    "anchor_point_nodes": 3,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      ".BB.",
+      ".BB.",
+      "PPPS",
+      "SSSS",
+      "+..+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "set_retro_dresser2": {
+    "name": "Art Deco Vanity",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_food_potato": {
+    "name": "Potato",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_statue_daruma": {
+    "name": "Daruma Statue",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_jar_empty2": {
+    "name": "Medical Jar",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": -1
+    }
+  },
+  "small_shell": {
+    "name": "Conch Shell",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_balloon3": {
+    "name": "Balloon C",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_books12": {
+    "name": "Books K",
+    "anchor_type": "stackable",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 1,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "P",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": -1
+    }
+  },
+  "object_taxidermy_turtle": {
+    "name": "Taxidermy Turtle",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": -2,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "set_wooden_shelf": {
+    "name": "Wooden Shelf A",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "wallmounted_picture_photo3": {
+    "name": "Photos",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_monster_dresser": {
+    "name": "Monster Dresser",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -2
+    }
+  },
+  "object_electronics_arcade1": {
+    "name": "Arcade Machine",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      4
+    ],
+    "occupied_tiles": 8,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "SS",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_jar_head2": {
+    "name": "Head In Jar B",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_clock": {
+    "name": "Grandfather Clock",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      3
+    ],
+    "occupied_tiles": 3,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_monster_table": {
+    "name": "Monster Table A",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -2
+    }
+  },
+  "set_monster_suspendedshelf2": {
+    "name": "Suspended Monster Shelf B",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -2
+    }
+  },
+  "wallmounted_picture_scream": {
+    "name": "Framed The Scream",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_icechest": {
+    "name": "Ice Chest",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_spider_chair": {
+    "name": "Spider Chair",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "object_broom": {
+    "name": "Broom",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_radio_atomic": {
+    "name": "Atomic Radio",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 2,
+    "shape_matrix_top_down": [
+      "BB",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_crystalball": {
+    "name": "Crystal Ball",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_90s_cabinet": {
+    "name": "Suspended 90s Cabinet",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_taxidermy_bat": {
+    "name": "Taxidermy Bat",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": -2,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "small_wobblebird": {
+    "name": "Wobble Bird",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_electronics_microwave3": {
+    "name": "Microwave C",
+    "anchor_type": "stackable",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_rustic_sidetable": {
+    "name": "Rustic Side Table",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "small_90sphone2": {
+    "name": "90s Phone B",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_sewn_tv": {
+    "name": "Sewn TV",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_cat_chair": {
+    "name": "Cat Chair",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "small_electronics_moon": {
+    "name": "Small Asteroid",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": -1
+    }
+  },
+  "set_spider_dresser": {
+    "name": "Spider Dresser",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "small_electronics_phone3": {
+    "name": "Rotary Phone C",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_jar_empty": {
+    "name": "Mason Jar",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": -1
+    }
+  },
+  "set_block_layingl": {
+    "name": "Laying \"L\" Block",
+    "anchor_type": "floor_base",
+    "can_flip": true,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 4,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "P..",
+      "PPP",
+      "+++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_sewer_shelf": {
+    "name": "Sewer Shelf",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 4,
+      "comfort": -1,
+      "health": -1,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "set_modern_tv": {
+    "name": "Modern TV",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_plant_piranhasplant": {
+    "name": "Potted Piranha Plant",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_junk_cabinet": {
+    "name": "Junk Cabinet",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_atomic_radio": {
+    "name": "Atomic Radio",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 2,
+    "shape_matrix_top_down": [
+      "BB",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_lab_tank1": {
+    "name": "Lab Tank A",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "special_suppressoridol": {
+    "name": "Idol of Chastity",
+    "anchor_type": "idol",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 5,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_wooden_lamp": {
+    "name": "Wooden Lamp",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_books2": {
+    "name": "Books B",
+    "anchor_type": "stackable",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 1,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "P",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": -1
+    }
+  },
+  "wallmounted_picture_rosie": {
+    "name": "Rosie Poster",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_90s_stool": {
+    "name": "90s Stool",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_torch": {
+    "name": "Torch",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_cloud": {
+    "name": "Cloud",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_food_root": {
+    "name": "Mandrake Root",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_taxidermy_bird": {
+    "name": "Taxidermy Pigeon",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": -2,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "set_elegant_shelf": {
+    "name": "Elegant Shelf",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "object_rock": {
+    "name": "Rock",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_robo_robochest": {
+    "name": "Robo Chest",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 3,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_letterblock6": {
+    "name": "Letter Block",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_fishtank_catfish": {
+    "name": "Catfish Aquarium",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_birdcage": {
+    "name": "Birdcage",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_electronics_pc": {
+    "name": "Desktop PC",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "special_fightidol": {
+    "name": "Idol of Chaos",
+    "anchor_type": "idol",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -5,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_statue_lotus": {
+    "name": "Lord Shiva Statue",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 2,
+      "comfort": -2,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "wallmounted_mask_bunny": {
+    "name": "Bunny Mask",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_trash_bread": {
+    "name": "Old Toast",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -1,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_food_squash": {
+    "name": "Squash",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_iv": {
+    "name": "IV",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_lab_testtube": {
+    "name": "Test Tube",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "small_kettle": {
+    "name": "Kettle",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_lab_flask3": {
+    "name": "Small Beaker",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "wallmounted_picture_lambs": {
+    "name": "Silence of the Mice Poster",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_spider_candelabra": {
+    "name": "Spider Candelabra",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "set_junk_lamp": {
+    "name": "Junk Lamp",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_plant_sunflower": {
+    "name": "Potted Sunflower",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_food_apple": {
+    "name": "Apple",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "special_stimulationidol": {
+    "name": "Idol of Stimulation",
+    "anchor_type": "idol",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 5,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "object_taxidermy_mouse": {
+    "name": "Taxidermy Mouse",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": -2,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "set_angelic_toilet": {
+    "name": "Angelic Toilet",
+    "anchor_type": "floor_base",
+    "can_flip": true,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 1,
+    "background_tiles": 1,
+    "shape_matrix_top_down": [
+      "B.",
+      "PS",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": -2,
+      "comfort": 1,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "set_crystal_dresser2": {
+    "name": "Crystal Dresser B",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -2,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 4
+    }
+  },
+  "object_food_turkey": {
+    "name": "Turkey",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_robo_robobody": {
+    "name": "Robo Body",
+    "anchor_type": "stackable",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 3,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_electronics_handradio": {
+    "name": "Retro Hand Radio",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      1
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 2,
+    "shape_matrix_top_down": [
+      "BB",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_crystal_table": {
+    "name": "Crystal Table",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -2,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 4
+    }
+  },
+  "special_appealidol": {
+    "name": "Idol of Appeal",
+    "anchor_type": "idol",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 5
+    }
+  },
+  "small_lab_jug2": {
+    "name": "Lab Jug B",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "wallmounted_picture_ufo": {
+    "name": "UFO Poster",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_sewer_tv": {
+    "name": "Sewer TV",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 4,
+      "comfort": -1,
+      "health": -1,
+      "mutation": 1,
+      "appeal": -1
+    }
+  },
+  "set_modern_dresser": {
+    "name": "Modern Dresser",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "object_fishtank_tadpoles": {
+    "name": "Tadpole Aquarium",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "set_angelic_table2": {
+    "name": "Angelic Table B",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": -2,
+      "comfort": 1,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "object_log": {
+    "name": "Log",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_shelf": {
+    "name": "Toy Shelf",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "special_healthidol": {
+    "name": "Idol of Health",
+    "anchor_type": "idol",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      2
+    ],
+    "occupied_tiles": 2,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 5,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_bone_tv": {
+    "name": "Bone TV",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": -1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "small_candle_black4": {
+    "name": "Small Red Candle B",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "set_cat_suspended_shelf": {
+    "name": "Suspended Cat Shelf",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 2
+    }
+  },
+  "set_monster_table2": {
+    "name": "Monster Table B",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      3,
+      2
+    ],
+    "occupied_tiles": 6,
+    "anchor_point_nodes": 3,
+    "background_tiles": 3,
+    "shape_matrix_top_down": [
+      "BBB",
+      "PPP",
+      "SSS",
+      "+.+"
+    ],
+    "base_stats": {
+      "stim": 1,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 1,
+      "appeal": -2
+    }
+  },
+  "set_80s_shelf": {
+    "name": "80s Shelf",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 2,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "wallmounted_picture_frida": {
+    "name": "Framed Frida",
+    "anchor_type": "wall",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 0,
+    "anchor_point_nodes": 0,
+    "background_tiles": 4,
+    "shape_matrix_top_down": [
+      "BB",
+      "BB"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 1,
+      "health": 0,
+      "mutation": 0,
+      "appeal": 1
+    }
+  },
+  "small_food_pumpkin": {
+    "name": "Pumpkin",
+    "anchor_type": "floor_base",
+    "can_flip": false,
+    "occupied_w_h": [
+      2,
+      2
+    ],
+    "occupied_tiles": 4,
+    "anchor_point_nodes": 2,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "PP",
+      "SS",
+      "++"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  },
+  "small_pillbottle": {
+    "name": "Small Pill Bottle",
+    "anchor_type": "topper",
+    "can_flip": false,
+    "occupied_w_h": [
+      1,
+      1
+    ],
+    "occupied_tiles": 1,
+    "anchor_point_nodes": 0,
+    "background_tiles": 0,
+    "shape_matrix_top_down": [
+      "S",
+      "+"
+    ],
+    "base_stats": {
+      "stim": 0,
+      "comfort": 0,
+      "health": 1,
+      "mutation": 0,
+      "appeal": 0
+    }
+  }
+}

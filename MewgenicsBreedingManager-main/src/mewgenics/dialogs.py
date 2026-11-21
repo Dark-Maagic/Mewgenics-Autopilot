@@ -1,0 +1,1753 @@
+"""Dialog windows: TagManager, ThresholdPreferences, OptimizerSearchSettings, SaveSelector."""
+from __future__ import annotations
+
+import os
+import datetime
+import platform
+import sys
+from pathlib import Path
+from typing import Optional
+
+from PySide6.QtWidgets import (
+    QWidget, QDialog, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QScrollArea, QFrame, QGridLayout, QSpinBox, QDoubleSpinBox, QCheckBox, QComboBox,
+    QListWidget, QListWidgetItem, QFileDialog, QGroupBox,
+    QStackedWidget, QTextBrowser, QDialogButtonBox,
+    QTableWidget, QTableWidgetItem, QHeaderView, QAbstractItemView,
+)
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtGui import QColor, QPixmap
+
+from mewgenics.utils.localization import _tr
+from mewgenics.utils.config import (
+    _save_root_dir,
+    _remember_tag_color_history,
+    _saved_tag_color_history,
+)
+from mewgenics.utils.paths import APP_VERSION
+from mewgenics.utils.tags import (
+    TAG_PRESET_COLORS, _TAG_DEFS, _save_tag_definitions, _next_tag_id,
+    _import_tag_image,
+)
+from mewgenics.utils.thresholds import (
+    _normalize_threshold_preferences,
+    _load_threshold_preferences,
+    _effective_thresholds_for_cats,
+)
+from mewgenics.utils.optimizer_settings import (
+    _normalize_optimizer_search_settings,
+    _load_optimizer_search_settings,
+    _OPTIMIZER_SEARCH_DEFAULTS,
+)
+
+from save_parser import Cat
+from mewgenics.scoring.cat_stats import get_cat_stats
+
+
+# ---------------------------------------------------------------------------
+# TagManagerDialog
+# ---------------------------------------------------------------------------
+
+class TagColorDialog(QDialog):
+    """Pick a tag color using either hex or RGB inputs."""
+
+    def __init__(self, parent=None, initial_color: str = "#555555", title: str = "Tag Color"):
+        super().__init__(parent)
+        self.setModal(True)
+        self.setWindowTitle(title)
+        self.setMinimumWidth(460)
+        self.setStyleSheet(
+            "QDialog { background:#1a1a32; color:#ddd; }"
+            "QLabel { color:#ddd; }"
+            "QLineEdit { background:#101024; color:#ddd; border:1px solid #2a2a4a;"
+            " padding:4px 8px; border-radius:4px; }"
+            "QSpinBox { background:#101024; color:#ddd; border:1px solid #2a2a4a;"
+            " padding:3px 6px; border-radius:4px; }"
+            "QGroupBox { color:#f1f1f9; border:1px solid #34345a; border-radius:6px;"
+            " margin-top:10px; padding-top:10px; }"
+            "QGroupBox::title { subcontrol-origin: margin; left:10px; padding:0 4px; }"
+            "QDialogButtonBox QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+            " border-radius:4px; padding:6px 12px; }"
+            "QDialogButtonBox QPushButton:hover { background:#34345f; }"
+        )
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        intro = QLabel("Set a tag color using RGB or hex. The preview updates live, and your recent colors stay available below.")
+        intro.setWordWrap(True)
+        intro.setStyleSheet("color:#aeb0d2;")
+        root.addWidget(intro)
+
+        self._color = QColor(initial_color)
+        if not self._color.isValid():
+            self._color = QColor("#555555")
+        self._updating = False
+        self._palette_buttons: list[tuple[QPushButton, str]] = []
+
+        palette_group = QGroupBox("Palette")
+        palette_layout = QVBoxLayout(palette_group)
+        palette_layout.setContentsMargins(10, 12, 10, 10)
+        palette_layout.setSpacing(10)
+
+        recent_label = QLabel("Recent Colors")
+        recent_label.setStyleSheet("color:#9aa0c7; font-size:11px; font-weight:bold;")
+        palette_layout.addWidget(recent_label)
+
+        recent_colors = _saved_tag_color_history(limit=12)
+        recent_grid = QGridLayout()
+        recent_grid.setContentsMargins(0, 0, 0, 0)
+        recent_grid.setHorizontalSpacing(6)
+        recent_grid.setVerticalSpacing(6)
+        if recent_colors:
+            self._add_palette_swatches(recent_grid, recent_colors, columns=6)
+            palette_layout.addLayout(recent_grid)
+        else:
+            recent_empty = QLabel("No saved colors yet. Confirm a color once and it will appear here.")
+            recent_empty.setWordWrap(True)
+            recent_empty.setStyleSheet("color:#7f84a8; font-style:italic;")
+            palette_layout.addWidget(recent_empty)
+
+        preset_label = QLabel("Preset Colors")
+        preset_label.setStyleSheet("color:#9aa0c7; font-size:11px; font-weight:bold;")
+        palette_layout.addWidget(preset_label)
+
+        preset_grid = QGridLayout()
+        preset_grid.setContentsMargins(0, 0, 0, 0)
+        preset_grid.setHorizontalSpacing(6)
+        preset_grid.setVerticalSpacing(6)
+        self._add_palette_swatches(preset_grid, TAG_PRESET_COLORS, columns=4)
+        palette_layout.addLayout(preset_grid)
+        root.addWidget(palette_group)
+
+        preview_group = QGroupBox("Preview")
+        preview_layout = QVBoxLayout(preview_group)
+        preview_layout.setContentsMargins(10, 12, 10, 10)
+        preview_layout.setSpacing(8)
+        self._preview_label = QLabel()
+        self._preview_label.setAlignment(Qt.AlignCenter)
+        self._preview_label.setMinimumHeight(56)
+        self._preview_label.setWordWrap(True)
+        preview_layout.addWidget(self._preview_label)
+        root.addWidget(preview_group)
+
+        form_group = QGroupBox("Color Values")
+        form_layout = QGridLayout(form_group)
+        form_layout.setHorizontalSpacing(10)
+        form_layout.setVerticalSpacing(8)
+
+        self._hex_input = QLineEdit()
+        self._hex_input.setPlaceholderText("#RRGGBB")
+        self._hex_input.textEdited.connect(self._on_hex_edited)
+        form_layout.addWidget(QLabel("Hex"), 0, 0)
+        form_layout.addWidget(self._hex_input, 0, 1, 1, 3)
+
+        self._red_spin = QSpinBox()
+        self._green_spin = QSpinBox()
+        self._blue_spin = QSpinBox()
+        for spin in (self._red_spin, self._green_spin, self._blue_spin):
+            spin.setRange(0, 255)
+            spin.valueChanged.connect(self._on_rgb_changed)
+
+        form_layout.addWidget(QLabel("R"), 1, 0)
+        form_layout.addWidget(self._red_spin, 1, 1)
+        form_layout.addWidget(QLabel("G"), 1, 2)
+        form_layout.addWidget(self._green_spin, 1, 3)
+        form_layout.addWidget(QLabel("B"), 2, 0)
+        form_layout.addWidget(self._blue_spin, 2, 1)
+
+        self._status_label = QLabel("")
+        self._status_label.setWordWrap(True)
+        self._status_label.setStyleSheet("color:#9aa0c7;")
+        form_layout.addWidget(self._status_label, 3, 0, 1, 4)
+
+        root.addWidget(form_group)
+
+        button_row = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        button_row.accepted.connect(self.accept)
+        button_row.rejected.connect(self.reject)
+        root.addWidget(button_row)
+
+        self._set_color(self._color)
+
+    def _make_palette_button(self, color: str) -> QPushButton:
+        btn = QPushButton()
+        btn.setFixedSize(24, 24)
+        btn.setCursor(Qt.PointingHandCursor)
+        btn.setToolTip(color.upper())
+        btn.setAccessibleName(color.upper())
+        btn.setFocusPolicy(Qt.NoFocus)
+        btn.clicked.connect(lambda checked=False, c=color: self._set_color(QColor(c)))
+        self._palette_buttons.append((btn, color))
+        return btn
+
+    def _add_palette_swatches(self, layout: QGridLayout, colors: list[str], columns: int):
+        for index, color in enumerate(colors):
+            btn = self._make_palette_button(color)
+            layout.addWidget(btn, index // columns, index % columns)
+
+    def _update_palette_button_styles(self):
+        current = self._color.name().lower()
+        for btn, color in self._palette_buttons:
+            swatch = QColor(color)
+            if not swatch.isValid():
+                continue
+            selected = swatch.name().lower() == current
+            border = "#ffffff" if selected else "#2f3254"
+            width = "2px" if selected else "1px"
+            btn.setStyleSheet(
+                f"QPushButton {{ background:{swatch.name()}; border:{width} solid {border};"
+                f" border-radius:5px; }}"
+                f"QPushButton:hover {{ border-color:#ffffff; }}"
+            )
+
+    @staticmethod
+    def _hex_to_color(text: str) -> QColor | None:
+        cleaned = str(text or "").strip()
+        if not cleaned:
+            return None
+        if cleaned.lower().startswith("0x"):
+            cleaned = cleaned[2:]
+        if cleaned.startswith("#"):
+            cleaned = cleaned[1:]
+        if len(cleaned) == 3:
+            cleaned = "".join(ch * 2 for ch in cleaned)
+        if len(cleaned) != 6:
+            return None
+        try:
+            int(cleaned, 16)
+        except ValueError:
+            return None
+        color = QColor(f"#{cleaned}")
+        return color if color.isValid() else None
+
+    def _set_color(self, color: QColor):
+        if not color.isValid():
+            return
+        self._color = QColor(color)
+        self._updating = True
+        try:
+            self._hex_input.setText(self._color.name())
+            self._red_spin.setValue(self._color.red())
+            self._green_spin.setValue(self._color.green())
+            self._blue_spin.setValue(self._color.blue())
+        finally:
+            self._updating = False
+        self._refresh_preview(valid=True)
+        self._update_palette_button_styles()
+
+    def _refresh_preview(self, valid: bool):
+        color_name = self._color.name()
+        rgb_text = f"RGB {self._color.red()}, {self._color.green()}, {self._color.blue()}"
+        fg = "#111111" if self._color.lightness() >= 140 else "#f6f6f6"
+        self._preview_label.setText(f"{color_name.upper()}\n{rgb_text}")
+        self._preview_label.setStyleSheet(
+            f"background:{color_name}; color:{fg}; border:1px solid #3d3d68; "
+            "border-radius:6px; padding:12px; font-weight:bold;"
+        )
+        if valid:
+            self._hex_input.setStyleSheet(
+                "QLineEdit { background:#101024; color:#ddd; border:1px solid #2a2a4a;"
+                " padding:4px 8px; border-radius:4px; }"
+            )
+            self._status_label.setText("Enter values in either field to update the preview.")
+            self._status_label.setStyleSheet("color:#9aa0c7;")
+        else:
+            self._hex_input.setStyleSheet(
+                "QLineEdit { background:#101024; color:#ddd; border:1px solid #7a3f3f;"
+                " padding:4px 8px; border-radius:4px; }"
+            )
+            self._status_label.setText(
+                "Hex must be a 3- or 6-digit value such as #E74C3C. The current color stays unchanged until you enter a valid value."
+            )
+            self._status_label.setStyleSheet("color:#f0b0b0;")
+
+    def _on_hex_edited(self, text: str):
+        if self._updating:
+            return
+        color = self._hex_to_color(text)
+        if color is None:
+            self._refresh_preview(valid=False)
+            return
+        self._set_color(color)
+
+    def _on_rgb_changed(self, _value: int):
+        if self._updating:
+            return
+        color = QColor(self._red_spin.value(), self._green_spin.value(), self._blue_spin.value())
+        if color.isValid():
+            self._set_color(color)
+
+    def selected_color(self) -> QColor:
+        return QColor(self._color)
+
+    def selected_hex(self) -> str:
+        return self._color.name()
+
+
+class TagManagerDialog(QDialog):
+    """Dialog for creating, editing, and deleting tag definitions."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Manage Tags")
+        self.setMinimumWidth(620)
+        self.setStyleSheet(
+            "QDialog { background:#1a1a32; color:#ddd; }"
+            "QLabel { color:#ddd; }"
+            "QGroupBox { color:#f1f1f9; border:1px solid #34345a; border-radius:6px; margin-top:10px; padding-top:10px; }"
+            "QGroupBox::title { subcontrol-origin: margin; left:10px; padding:0 4px; }"
+            "QLineEdit { background:#101024; color:#ddd; border:1px solid #2a2a4a;"
+            " padding:4px 8px; border-radius:4px; }"
+        )
+        layout = QVBoxLayout(self)
+        layout.setSpacing(12)
+
+        intro = QLabel(
+            "Create and edit your tag palette. Images are copied into the app's tag asset folder and shown as previews."
+        )
+        intro.setWordWrap(True)
+        intro.setStyleSheet("color:#aeb0d2;")
+        layout.addWidget(intro)
+
+        # Tag list area
+        list_group = QGroupBox("Existing Tags")
+        list_layout = QVBoxLayout(list_group)
+        list_layout.setContentsMargins(10, 12, 10, 10)
+        list_layout.setSpacing(8)
+
+        self._list_widget = QWidget()
+        self._list_layout = QVBoxLayout(self._list_widget)
+        self._list_layout.setContentsMargins(0, 0, 0, 0)
+        self._list_layout.setSpacing(6)
+
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)
+        scroll.setWidget(self._list_widget)
+        scroll.setFrameShape(QFrame.NoFrame)
+        scroll.setMaximumHeight(300)
+        scroll.setStyleSheet("QScrollArea { border:none; background:transparent; }")
+        list_layout.addWidget(scroll)
+        layout.addWidget(list_group)
+
+        # Add new tag section
+        add_group = QGroupBox("Create Tag")
+        add_layout = QVBoxLayout(add_group)
+        add_layout.setContentsMargins(10, 12, 10, 10)
+        add_layout.setSpacing(8)
+
+        name_row = QHBoxLayout()
+        name_row.setSpacing(8)
+
+        self._name_input = QLineEdit()
+        self._name_input.setPlaceholderText("New tag name...")
+        self._name_input.setMaxLength(20)
+        name_row.addWidget(self._name_input, 1)
+        add_layout.addLayout(name_row)
+
+        color_row = QHBoxLayout()
+        color_row.setSpacing(6)
+        self._selected_color = TAG_PRESET_COLORS[0]
+        self._color_btns = []
+        for color in TAG_PRESET_COLORS:
+            btn = QPushButton()
+            btn.setFixedSize(22, 22)
+            btn.setStyleSheet(
+                f"QPushButton {{ background:{color}; border:2px solid transparent;"
+                f" border-radius:11px; }}"
+                f"QPushButton:hover {{ border-color:#fff; }}"
+            )
+            btn.clicked.connect(lambda checked=False, c=color: self._select_color(c))
+            self._color_btns.append((btn, color))
+            color_row.addWidget(btn)
+
+        self._custom_color_btn = QPushButton("Custom Color")
+        self._custom_color_btn.setStyleSheet(
+            "QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+            " border-radius:4px; padding:4px 10px; }"
+            "QPushButton:hover { background:#34345f; }"
+        )
+        self._custom_color_btn.clicked.connect(self._pick_custom_color)
+        color_row.addWidget(self._custom_color_btn)
+        color_row.addStretch(1)
+        add_layout.addLayout(color_row)
+
+        image_row = QHBoxLayout()
+        image_row.setSpacing(8)
+        image_row.addWidget(QLabel("Image:"))
+        self._image_preview = QLabel("None")
+        self._image_preview.setAlignment(Qt.AlignCenter)
+        self._image_preview.setFixedSize(36, 36)
+        self._image_preview.setStyleSheet(
+            "QLabel { background:#101024; color:#9aa0c7; border:1px solid #2a2a4a;"
+            " border-radius:4px; font-size:9px; }"
+        )
+        image_row.addWidget(self._image_preview)
+        self._image_path_label = QLabel("None")
+        self._image_path_label.setStyleSheet("color:#9aa0c7;")
+        self._image_path_label.setWordWrap(False)
+        image_row.addWidget(self._image_path_label, 1)
+        self._pick_image_btn = QPushButton("Choose Image…")
+        self._pick_image_btn.setStyleSheet(
+            "QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+            " border-radius:4px; padding:4px 10px; }"
+            "QPushButton:hover { background:#34345f; }"
+        )
+        self._pick_image_btn.clicked.connect(self._pick_new_tag_image)
+        image_row.addWidget(self._pick_image_btn)
+        self._clear_image_btn = QPushButton("Clear")
+        self._clear_image_btn.setStyleSheet(
+            "QPushButton { background:#2d2020; color:#f0b0b0; border:1px solid #5a3434;"
+            " border-radius:4px; padding:4px 10px; }"
+            "QPushButton:hover { background:#4a2a2a; }"
+        )
+        self._clear_image_btn.clicked.connect(self._clear_new_tag_image)
+        image_row.addWidget(self._clear_image_btn)
+        add_layout.addLayout(image_row)
+
+        self._selected_image_path = ""
+        self._update_image_preview(self._image_preview, "")
+
+        add_btn = QPushButton("Add Tag")
+        add_btn.setMinimumHeight(30)
+        add_btn.setMinimumWidth(108)
+        add_btn.setStyleSheet(
+            "QPushButton { background:#2a4a2a; color:#d6f0d6; font-size:12px; font-weight:bold;"
+            " border:1px solid #4a7a4a; border-radius:4px; padding:4px 12px; }"
+            "QPushButton:hover { background:#3a6a3a; }"
+        )
+        add_btn.clicked.connect(self._add_tag)
+        add_layout.addWidget(add_btn, alignment=Qt.AlignRight)
+
+        layout.addWidget(add_group)
+        self._update_color_selection()
+        self._rebuild_list()
+
+        # Close button
+        close_btn = QPushButton("Close")
+        close_btn.setStyleSheet(
+            "QPushButton { background:#252545; color:#aaa; padding:6px 16px;"
+            " border:none; border-radius:4px; }"
+            "QPushButton:hover { background:#353565; color:#ddd; }"
+        )
+        close_btn.clicked.connect(self.accept)
+        layout.addWidget(close_btn, alignment=Qt.AlignRight)
+
+    def _select_color(self, color: str):
+        self._selected_color = color
+        _remember_tag_color_history(color)
+        self._selected_image_path = self._selected_image_path or ""
+        self._update_color_selection()
+
+    def _update_color_selection(self):
+        for btn, color in self._color_btns:
+            if color == self._selected_color:
+                btn.setStyleSheet(
+                    f"QPushButton {{ background:{color}; border:2px solid #fff;"
+                    f" border-radius:11px; }}"
+                )
+            else:
+                btn.setStyleSheet(
+                    f"QPushButton {{ background:{color}; border:2px solid transparent;"
+                    f" border-radius:11px; }}"
+                    f"QPushButton:hover {{ border-color:#fff; }}"
+                )
+        if self._selected_color in TAG_PRESET_COLORS:
+            self._custom_color_btn.setStyleSheet(
+                "QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+                " border-radius:4px; padding:4px 10px; }"
+                "QPushButton:hover { background:#34345f; }"
+            )
+        else:
+            custom_color = QColor(self._selected_color)
+            if custom_color.isValid():
+                fg = "#111111" if custom_color.lightness() >= 140 else "#f6f6f6"
+                self._custom_color_btn.setStyleSheet(
+                    f"QPushButton {{ background:{custom_color.name()}; color:{fg}; border:1px solid #ffffff66;"
+                    " border-radius:4px; padding:4px 10px; font-weight:bold; }}"
+                    f"QPushButton:hover {{ border-color:#fff; }}"
+                )
+            else:
+                self._custom_color_btn.setStyleSheet(
+                    "QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+                    " border-radius:4px; padding:4px 10px; }"
+                    "QPushButton:hover { background:#34345f; }"
+                )
+
+    def _update_image_preview(self, label: QLabel, path: str, empty_text: str = "None"):
+        label.setAlignment(Qt.AlignCenter)
+        label.setStyleSheet(
+            "QLabel { background:#101024; color:#9aa0c7; border:1px solid #2a2a4a;"
+            " border-radius:4px; font-size:9px; }"
+        )
+        clean = str(path or "").strip()
+        if clean:
+            pix = QPixmap(clean)
+            if not pix.isNull():
+                _dpr = self.devicePixelRatioF()
+                _ls = label.size()
+                _target = QSize(int(_ls.width() * _dpr), int(_ls.height() * _dpr))
+                pix = pix.scaled(
+                    _target,
+                    Qt.KeepAspectRatio,
+                    Qt.SmoothTransformation,
+                )
+                pix.setDevicePixelRatio(_dpr)
+                label.setPixmap(
+                    pix
+                )
+                label.setText("")
+                label.setToolTip(os.path.basename(clean))
+                return
+        label.setPixmap(QPixmap())
+        label.setText(empty_text)
+        label.setToolTip(empty_text)
+
+    def _open_color_dialog(self, initial_color: str, title: str) -> str | None:
+        dlg = TagColorDialog(self, initial_color=initial_color, title=title)
+        if dlg.exec() != QDialog.Accepted:
+            return None
+        return dlg.selected_hex()
+
+    def _pick_custom_color(self):
+        color = self._open_color_dialog(self._selected_color, "Custom Tag Color")
+        if not color:
+            return
+        self._selected_color = color
+        _remember_tag_color_history(color)
+        self._update_color_selection()
+
+    def _pick_new_tag_image(self):
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Choose tag image",
+            str(Path.home()),
+            "Images (*.png *.jpg *.jpeg *.bmp *.gif *.webp);;All Files (*.*)",
+        )
+        if path:
+            copied = _import_tag_image(path)
+            self._selected_image_path = copied or path
+            self._update_image_preview(self._image_preview, self._selected_image_path)
+            self._image_path_label.setText(os.path.basename(self._selected_image_path))
+            self._image_path_label.setToolTip(os.path.basename(self._selected_image_path))
+        else:
+            self._selected_image_path = ""
+            self._update_image_preview(self._image_preview, "")
+            self._image_path_label.setText("None")
+            self._image_path_label.setToolTip("None")
+
+    def _clear_new_tag_image(self):
+        self._selected_image_path = ""
+        self._update_image_preview(self._image_preview, "")
+        self._image_path_label.setText("None")
+        self._image_path_label.setToolTip("None")
+
+    def _add_tag(self):
+        name = self._name_input.text().strip()
+        _remember_tag_color_history(self._selected_color)
+        tag_id = _next_tag_id()
+        _TAG_DEFS.append({
+            "id": tag_id,
+            "name": name,
+            "color": self._selected_color,
+            "image_path": self._selected_image_path,
+        })
+        _save_tag_definitions()
+        self._name_input.clear()
+        self._clear_new_tag_image()
+        self._rebuild_list()
+
+    def _delete_tag(self, tag_id: str):
+        _TAG_DEFS[:] = [td for td in _TAG_DEFS if td["id"] != tag_id]
+        _save_tag_definitions()
+        mw = self.parent()
+        if hasattr(mw, '_cats'):
+            for cat in mw._cats:
+                current = list(getattr(cat, 'tags', None) or [])
+                if tag_id in current:
+                    current.remove(tag_id)
+                    cat.tags = current
+        self._rebuild_list()
+
+    def _rename_tag(self, tag_id: str, new_name: str):
+        for td in _TAG_DEFS:
+            if td["id"] == tag_id:
+                td["name"] = new_name.strip()
+                break
+        _save_tag_definitions()
+
+    def _recolor_tag(self, tag_id: str, new_color: str):
+        _remember_tag_color_history(new_color)
+        for td in _TAG_DEFS:
+            if td["id"] == tag_id:
+                td["color"] = new_color
+                break
+        _save_tag_definitions()
+        self._rebuild_list()
+
+    def _set_tag_image(self, tag_id: str, image_path: str):
+        for td in _TAG_DEFS:
+            if td["id"] == tag_id:
+                td["image_path"] = _import_tag_image(image_path, tag_id) if image_path else ""
+                break
+        _save_tag_definitions()
+        self._rebuild_list()
+
+    def _rebuild_list(self):
+        while self._list_layout.count():
+            item = self._list_layout.takeAt(0)
+            if item.widget():
+                item.widget().deleteLater()
+
+        if not _TAG_DEFS:
+            empty = QLabel("No tags defined yet")
+            empty.setStyleSheet("color:#666; font-style:italic; padding:10px;")
+            empty.setAlignment(Qt.AlignCenter)
+            self._list_layout.addWidget(empty)
+        else:
+            for td in _TAG_DEFS:
+                row = QWidget()
+                rl = QHBoxLayout(row)
+                rl.setContentsMargins(4, 2, 4, 2)
+                rl.setSpacing(8)
+
+                swatch = QPushButton()
+                swatch.setFixedSize(20, 20)
+                swatch.setStyleSheet(
+                    f"QPushButton {{ background:{td['color']}; border:none; border-radius:10px; }}"
+                    f"QPushButton:hover {{ border:2px solid #fff; }}"
+                )
+                tag_id = td["id"]
+                swatch.clicked.connect(lambda checked, tid=tag_id: self._show_color_picker(tid))
+                rl.addWidget(swatch)
+
+                preview = QLabel("None")
+                preview.setAlignment(Qt.AlignCenter)
+                preview.setFixedSize(32, 32)
+                preview.setStyleSheet(
+                    "QLabel { background:#101024; color:#9aa0c7; border:1px solid #2a2a4a;"
+                    " border-radius:4px; font-size:8px; }"
+                )
+                self._update_image_preview(preview, str(td.get("image_path", "") or ""), "None")
+                preview.setToolTip(os.path.basename(str(td.get("image_path", "") or "")) or "No image")
+                rl.addWidget(preview)
+
+                name_edit = QLineEdit(td["name"])
+                name_edit.setMaxLength(20)
+                name_edit.setPlaceholderText("Tag name")
+                name_edit.setStyleSheet(
+                    "QLineEdit { background:transparent; color:#ddd; border:none;"
+                    " border-bottom:1px solid #2a2a4a; padding:2px 4px; font-size:12px; }"
+                    "QLineEdit:focus { border-bottom-color:#5a5a8a; }"
+                )
+                name_edit.editingFinished.connect(
+                    lambda tid=tag_id, le=name_edit: self._rename_tag(tid, le.text())
+                )
+                rl.addWidget(name_edit, 1)
+
+                image_label = QLabel(os.path.basename(str(td.get("image_path", "") or "")) or "No image")
+                image_label.setStyleSheet("color:#9aa0c7; font-size:11px;")
+                image_label.setFixedWidth(150)
+                image_label.setToolTip(os.path.basename(str(td.get("image_path", "") or "")) or "No image")
+                rl.addWidget(image_label)
+
+                img_btn = QPushButton("Image…")
+                img_btn.setFixedWidth(70)
+                img_btn.setStyleSheet(
+                    "QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+                    " border-radius:4px; padding:3px 8px; font-size:11px; }"
+                    "QPushButton:hover { background:#34345f; }"
+                )
+                img_btn.clicked.connect(lambda checked=False, tid=tag_id: self._show_image_picker(tid))
+                rl.addWidget(img_btn)
+
+                clear_img_btn = QPushButton("Clear")
+                clear_img_btn.setFixedWidth(60)
+                clear_img_btn.setStyleSheet(
+                    "QPushButton { background:#2d2020; color:#f0b0b0; border:1px solid #5a3434;"
+                    " border-radius:4px; padding:3px 8px; font-size:11px; }"
+                    "QPushButton:hover { background:#4a2a2a; }"
+                )
+                clear_img_btn.clicked.connect(lambda checked=False, tid=tag_id: self._set_tag_image(tid, ""))
+                rl.addWidget(clear_img_btn)
+
+                del_btn = QPushButton("x")
+                del_btn.setFixedSize(22, 22)
+                del_btn.setStyleSheet(
+                    "QPushButton { background:transparent; color:#855; font-size:12px;"
+                    " font-weight:bold; border:1px solid #433; border-radius:11px; }"
+                    "QPushButton:hover { background:#4a2020; color:#f88; border-color:#855; }"
+                )
+                del_btn.clicked.connect(lambda checked, tid=tag_id: self._delete_tag(tid))
+                rl.addWidget(del_btn)
+
+                self._list_layout.addWidget(row)
+
+        self._list_layout.addStretch()
+
+    def _show_color_picker(self, tag_id: str):
+        popup = QDialog(self)
+        popup.setWindowTitle("Pick Color")
+        popup.setFixedWidth(280)
+        popup.setStyleSheet("QDialog { background:#1a1a32; }")
+        grid = QGridLayout(popup)
+        grid.setSpacing(6)
+        for i, color in enumerate(TAG_PRESET_COLORS):
+            btn = QPushButton()
+            btn.setFixedSize(30, 30)
+            btn.setStyleSheet(
+                f"QPushButton {{ background:{color}; border:2px solid transparent;"
+                f" border-radius:15px; }}"
+                f"QPushButton:hover {{ border-color:#fff; }}"
+            )
+            btn.clicked.connect(lambda checked=False, c=color: (self._recolor_tag(tag_id, c), popup.accept()))
+            grid.addWidget(btn, i // 4, i % 4)
+
+        custom = QPushButton("Custom Color")
+        custom.setStyleSheet(
+            "QPushButton { background:#252545; color:#ddd; border:1px solid #3d3d68;"
+            " border-radius:4px; padding:5px 10px; }"
+            "QPushButton:hover { background:#34345f; }"
+        )
+        custom.clicked.connect(lambda: self._pick_color_from_dialog(tag_id, popup))
+        grid.addWidget(custom, len(TAG_PRESET_COLORS) // 4 + 1, 0, 1, 4)
+        popup.exec()
+
+    def _pick_color_from_dialog(self, tag_id: str, popup: QDialog):
+        color = self._open_color_dialog(_tag_color(tag_id), "Edit Tag Color")
+        if not color:
+            return
+        self._recolor_tag(tag_id, color)
+        popup.accept()
+
+    def _show_image_picker(self, tag_id: str):
+        current = ""
+        for td in _TAG_DEFS:
+            if td["id"] == tag_id:
+                current = str(td.get("image_path", "") or "")
+                break
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Choose tag image",
+            str(Path(current).expanduser().parent) if current else str(Path.home()),
+            "Images (*.png *.jpg *.jpeg *.bmp *.gif *.webp);;All Files (*.*)",
+        )
+        if path:
+            self._set_tag_image(tag_id, path)
+
+
+# ---------------------------------------------------------------------------
+# About / onboarding / changelog dialogs
+# ---------------------------------------------------------------------------
+
+class AboutDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setModal(True)
+        self.setWindowTitle("About Mewgenics Breeding Manager")
+        self.setMinimumWidth(560)
+        self.setStyleSheet(
+            "QDialog { background:#0d0d1c; }"
+            "QLabel { color:#ddd; }"
+            "QTextBrowser { background:#101023; color:#ddd; border:1px solid #26264a;"
+            " border-radius:6px; padding:12px; }"
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a;"
+            " border-radius:4px; padding:6px 12px; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+        )
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        title = QLabel(f"Mewgenics Breeding Manager v{APP_VERSION}")
+        title.setStyleSheet("color:#f0f0ff; font-size:18px; font-weight:bold;")
+        root.addWidget(title)
+
+        body = QTextBrowser()
+        body.setOpenExternalLinks(True)
+        import PySide6
+
+        pyside_version = getattr(PySide6, "__version__", "unknown")
+        body.setHtml(
+            f"""
+            <div style="line-height:1.45;">
+              <p>A desktop companion for breeding analysis, room planning, mutation inspection, and save-file organization.</p>
+              <ul>
+                <li><b>App version:</b> {APP_VERSION}</li>
+                <li><b>Python:</b> {platform.python_version()}</li>
+                <li><b>PySide6:</b> {pyside_version}</li>
+              </ul>
+              <p><a href="https://github.com/frankieg33/MewgenicsBreedingManager">Project on GitHub</a></p>
+              <hr style="border:none; border-top:1px solid #26264a; margin:8px 0;">
+              <p><b>Credits</b></p>
+              <ul>
+                <li><b>Detailed Scoring</b> — concept and implementation by <a href="https://github.com/byronaltice">Byron Altice</a>.</li>
+              </ul>
+            </div>
+            """
+        )
+        root.addWidget(body, 1)
+
+        button_row = QHBoxLayout()
+        button_row.addStretch(1)
+        close_btn = QPushButton("Close")
+        close_btn.clicked.connect(self.accept)
+        button_row.addWidget(close_btn)
+        root.addLayout(button_row)
+
+
+class WhatsNewDialog(QDialog):
+    def __init__(self, parent=None, version: str = APP_VERSION, highlights: list[str] | None = None):
+        super().__init__(parent)
+        self.setModal(True)
+        self.setWindowTitle(f"What's New in v{version}")
+        self.setMinimumWidth(620)
+        self.setStyleSheet(
+            "QDialog { background:#0d0d1c; }"
+            "QLabel { color:#ddd; }"
+            "QTextBrowser { background:#101023; color:#ddd; border:1px solid #26264a;"
+            " border-radius:6px; padding:12px; }"
+            "QPushButton { background:#1f5f4a; color:#f2f7f3; border:1px solid #3f8f72;"
+            " border-radius:4px; padding:6px 12px; }"
+            "QPushButton:hover { background:#26735a; }"
+        )
+
+        default_highlights = highlights or [
+            "Final maintained release. This project is being archived — the repo will be read-only shortly and no further issues or PRs will be accepted. The app is in a working state; anyone is welcome to fork and continue from here. See the README for build instructions.",
+            "Mating Pair Search: 'Hide in-love' filters now treat any lover (not just mutual) as disqualifying. Cats with any lover show a ♥ next to their name in both the left list and the matches table, and the list now shows age for quick context (#102, #103).",
+            "Donation/Exceptional thresholds can now be driven by Detailed Scoring — new 'Score source' combo in the Thresholds dialog swaps base-sum thresholds for Detailed Scoring floats (#104).",
+            "CSV/XLSX export: added Class, Passive Abilities, Disorders, Defects, Tags, Lovers, and Haters columns.",
+            "Getting Started guide: new 9-page walkthrough with a startup prompt (Open Guide / Skip Once / Always Skip), accessible from Help > Getting Started.",
+            "Startup: splash screen now waits for the save to finish loading before the Getting Started prompt or What's New dialog appears, so the splash doesn't stay parked behind modal windows.",
+            "Breeding math: can_breed and the new game_compatibility helper now cite the wiki's formula directly (0.15 × CHA × libido × lover_mult × sexuality_mult with the > 0.05 gate) and used for compat-aware scoring.",
+        ]
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        title = QLabel(f"What's New in v{version}")
+        title.setStyleSheet("color:#f0f0ff; font-size:18px; font-weight:bold;")
+        root.addWidget(title)
+
+        body = QTextBrowser()
+        body.setOpenExternalLinks(True)
+        bullets = "".join(f"<li>{item}</li>" for item in default_highlights)
+        body.setHtml(
+            f"""
+            <div style="line-height:1.5;">
+              <p><b>Final maintained release.</b> Bundles the #102–#104 fixes, the new Getting Started guide, and the Detailed Scoring donation/exceptional source.</p>
+              <ul>{bullets}</ul>
+              <p><a href="https://github.com/frankieg33/MewgenicsBreedingManager/releases">View releases on GitHub</a></p>
+            </div>
+            """
+        )
+        root.addWidget(body, 1)
+
+        button_row = QHBoxLayout()
+        button_row.addStretch(1)
+        close_btn = QPushButton("Close")
+        close_btn.clicked.connect(self.accept)
+        button_row.addWidget(close_btn)
+        root.addLayout(button_row)
+
+
+class GettingStartedPromptDialog(QDialog):
+    OPEN_GUIDE = "open"
+    SKIP_ONCE = "skip_once"
+    ALWAYS_SKIP = "always_skip"
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.choice = self.SKIP_ONCE
+        self.setModal(True)
+        self.setWindowTitle("Getting Started")
+        self.setMinimumWidth(460)
+        self.setStyleSheet(
+            "QDialog { background:#0d0d1c; }"
+            "QLabel { color:#ddd; }"
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a;"
+            " border-radius:4px; padding:6px 12px; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+        )
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        title = QLabel("Open the getting started guide?")
+        title.setStyleSheet("color:#f0f0ff; font-size:18px; font-weight:bold;")
+        root.addWidget(title)
+
+        body = QLabel(
+            "This short guide explains the main roster workflow, breeding tools, and where to export cats when you want outside help."
+        )
+        body.setWordWrap(True)
+        body.setStyleSheet("color:#b9bddf; line-height:1.4;")
+        root.addWidget(body)
+
+        button_row = QHBoxLayout()
+        button_row.addStretch(1)
+
+        open_btn = QPushButton("Open Guide")
+        open_btn.clicked.connect(self._open_guide)
+        button_row.addWidget(open_btn)
+
+        skip_once_btn = QPushButton("Skip Once")
+        skip_once_btn.clicked.connect(self._skip_once)
+        button_row.addWidget(skip_once_btn)
+
+        always_skip_btn = QPushButton("Always Skip")
+        always_skip_btn.clicked.connect(self._always_skip)
+        button_row.addWidget(always_skip_btn)
+
+        root.addLayout(button_row)
+
+    def _open_guide(self):
+        self.choice = self.OPEN_GUIDE
+        self.accept()
+
+    def _skip_once(self):
+        self.choice = self.SKIP_ONCE
+        self.accept()
+
+    def _always_skip(self):
+        self.choice = self.ALWAYS_SKIP
+        self.accept()
+
+
+class OnboardingDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setModal(True)
+        self.setWindowTitle("Getting Started")
+        self.setMinimumWidth(680)
+        # Default size tall enough that the longer pages (Detailed Scoring,
+        # Sprites) fit without an internal scrollbar, but not so tall that
+        # short pages leave a huge empty void.
+        self.setMinimumHeight(420)
+        self.resize(760, 560)
+        self.setStyleSheet(
+            "QDialog { background:#0d0d1c; }"
+            "QLabel { color:#ddd; }"
+            "QTextBrowser { background:#101023; color:#ddd; border:1px solid #26264a;"
+            " border-radius:6px; padding:12px; }"
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a;"
+            " border-radius:4px; padding:6px 12px; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+            "QPushButton:disabled { color:#555; background:#141428; }"
+        )
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        title = QLabel("Getting Started With Mewgenics Breeding Manager")
+        title.setStyleSheet("color:#f0f0ff; font-size:18px; font-weight:bold;")
+        root.addWidget(title)
+
+        self._stack = QStackedWidget()
+        self._stack.addWidget(self._make_page(
+            "1. Start Here",
+            f"""
+            <p>This app helps you inspect your save, find strong breeders, compare pairings, and export cat data when you want outside help.</p>
+            <p>A practical workflow is: load your save, use the app to narrow the roster, export a CSV, then ask an LLM or check the community wiki for extra ideas and terminology.</p>
+            <p>Start with <b>File &gt; Open Save</b> or your configured default save.</p>
+            <p>The save root currently points to:</p>
+            <p><code>{_save_root_dir()}</code></p>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "2. Your Main Workflow",
+            """
+            <p>Most sessions follow the same loop:</p>
+            <ul>
+              <li>Start in the roster to sort, filter, and tag cats.</li>
+              <li>Use quick scoring views to identify weak cats, strong cats, and likely breeders.</li>
+              <li>Open pair search or scoring views when you want recommendations.</li>
+              <li>Use planner and family views when you need longer-term context.</li>
+            </ul>
+            <p>You do not need every tab every time. The app is most useful when you jump to the tool that matches your current breeding question.</p>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "3. Roster: Your Home Base",
+            """
+            <p>The roster is the home base for almost everything. Use it to sort, filter, tag, and inspect cats before opening more specialized tools.</p>
+            <ul>
+              <li>Click column headers to sort by the stats or traits you care about.</li>
+              <li>Use tags and quick actions to mark breeders, experiments, or cats you plan to donate.</li>
+              <li>Open cat details whenever you need a clearer picture before making a pairing decision.</li>
+            </ul>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "4. Find Weak Cats Fast",
+            """
+            <p>When you want to trim the roster quickly, start with the built-in shortcuts for weak-cat review.</p>
+            <ul>
+              <li><b>Donation Candidates</b> helps surface cats that are usually safe to give away.</li>
+              <li><b>Simple Scoring</b> is great when you want a fast custom point system for your current breeding goal.</li>
+              <li>Combining filters, tags, and a simple score usually gets you to a manageable shortlist fast.</li>
+            </ul>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "5. Understand Pair Suggestions",
+            """
+            <p>Pair-search tools are useful because the app checks a huge number of possible combinations for you.</p>
+            <ul>
+              <li>Instead of manually eyeballing every match, the app searches many combinations and surfaces the strongest-looking options.</li>
+              <li>If you ever wonder <b>&ldquo;why these 4 pairs?&rdquo;</b>, treat the list as a shortlist generated from the app&apos;s scoring rules and breeding constraints.</li>
+              <li>The right next step is usually to click into a promising pair and inspect the details, not to assume the first result is always the only correct answer.</li>
+            </ul>
+            <ul>
+              <li>Some top pairs are balanced all-rounders.</li>
+              <li>Others are specialized picks for a stat, trait, or safer lineage goal.</li>
+            </ul>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "6. Detailed Scoring",
+            """
+            <p><b>Detailed Scoring</b> is the deeper ranking tool when you want more than a quick yes/no filter.</p>
+            <ul>
+              <li>It ranks cats using configurable weights, scope, and trait priorities.</li>
+              <li>Use it when you want to understand <i>why</i> a cat rises to the top instead of just seeing a simple total.</li>
+              <li>Profiles let you save different breeding philosophies and switch between them quickly.</li>
+              <li>Heatmap coloring makes strengths and weaknesses easier to scan at a glance.</li>
+            </ul>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "7. Planning Tools",
+            """
+            <p>Use the planning views when you are no longer asking &ldquo;Who looks good right now?&rdquo; and have moved on to &ldquo;What should I do over the next few generations?&rdquo;</p>
+            <ul>
+              <li><b>Perfect Planner</b> helps you map out future breeding steps.</li>
+              <li><b>Room Optimizer</b> helps organize active breeders and room assignments.</li>
+              <li>These tools are best after you already know which cats you want to keep in the program.</li>
+            </ul>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "8. Family Tree And Context",
+            """
+            <p>The family and context views are where you sanity-check a promising idea before you commit to it.</p>
+            <ul>
+              <li><b>Family Tree</b> helps you understand ancestry, relationships, and how a cat fits into the bigger picture.</li>
+              <li>Use detail views when you need context on traits, parents, offspring, or lineage risks.</li>
+              <li>Good pair suggestions become much easier to trust once you confirm the surrounding family context.</li>
+            </ul>
+            """,
+        ))
+        self._stack.addWidget(self._make_page(
+            "9. Export And Ask For Help",
+            """
+            <p>When you want a second opinion, export your data and ask a focused question.</p>
+            <p>Use <b>File &gt; Export Cats</b>, then share the CSV with your helper tool of choice.</p>
+            <p>Example prompts:</p>
+            <ul>
+              <li>&ldquo;Based on this CSV, which cats look like the best long-term breeders and why?&rdquo;</li>
+              <li>&ldquo;Which cats look safest to donate without hurting my breeding options?&rdquo;</li>
+              <li>&ldquo;What do these mutations and traits mean, and which ones should I prioritize?&rdquo;</li>
+            </ul>
+            """,
+        ))
+        root.addWidget(self._stack, 1)
+
+        self._page_label = QLabel("")
+        self._page_label.setStyleSheet("color:#8f95bd; font-size:11px;")
+        root.addWidget(self._page_label)
+
+        button_row = QHBoxLayout()
+        self._back_btn = QPushButton("Back")
+        self._back_btn.clicked.connect(self._previous_page)
+        button_row.addWidget(self._back_btn)
+        button_row.addStretch(1)
+        self._next_btn = QPushButton("Next")
+        self._next_btn.clicked.connect(self._next_page)
+        button_row.addWidget(self._next_btn)
+        self._finish_btn = QPushButton("Finish")
+        self._finish_btn.clicked.connect(self.accept)
+        button_row.addWidget(self._finish_btn)
+        root.addLayout(button_row)
+
+        self._stack.currentChanged.connect(self._update_controls)
+        self._update_controls(0)
+
+    def _make_page(self, title: str, html_body: str) -> QWidget:
+        page = QWidget()
+        layout = QVBoxLayout(page)
+        layout.setContentsMargins(6, 6, 6, 6)
+        layout.setSpacing(10)
+        heading = QLabel(title)
+        heading.setStyleSheet("color:#f0f0ff; font-size:16px; font-weight:bold;")
+        layout.addWidget(heading)
+        body = QTextBrowser()
+        body.setOpenExternalLinks(True)
+        body.setHtml(f"<div style='line-height:1.5;'>{html_body}</div>")
+        layout.addWidget(body, 1)
+        return page
+
+    def _update_controls(self, index: int):
+        total = self._stack.count()
+        self._page_label.setText(f"Page {index + 1} of {total}")
+        self._back_btn.setEnabled(index > 0)
+        if index >= total - 1:
+            self._next_btn.setEnabled(False)
+            self._finish_btn.setDefault(True)
+        else:
+            self._next_btn.setEnabled(True)
+            self._finish_btn.setDefault(False)
+
+    def _previous_page(self):
+        self._stack.setCurrentIndex(max(0, self._stack.currentIndex() - 1))
+
+    def _next_page(self):
+        next_index = self._stack.currentIndex() + 1
+        if next_index >= self._stack.count():
+            self.accept()
+            return
+        self._stack.setCurrentIndex(next_index)
+
+
+# ---------------------------------------------------------------------------
+# ThresholdPreferencesDialog
+# ---------------------------------------------------------------------------
+
+class ThresholdPreferencesDialog(QDialog):
+    def __init__(self, parent=None, prefs: dict | None = None, cats: list[Cat] | None = None):
+        super().__init__(parent)
+        self.setModal(True)
+        self.setWindowTitle(_tr("thresholds.title", default="Donation / Exceptional Thresholds"))
+        self.setMinimumWidth(520)
+        self.setStyleSheet(
+            "QDialog { background:#0a0a18; }"
+            "QLabel { color:#cfcfe0; }"
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a; "
+            "border-radius:4px; padding:6px 12px; font-size:11px; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+            "QCheckBox { color:#d8d8e8; }"
+            "QSpinBox, QDoubleSpinBox { background:#0d0d1c; color:#ddd; border:1px solid #2a2a4a; "
+            "border-radius:4px; padding:3px 6px; }"
+        )
+
+        self._cats = list(cats or [])
+        self._prefs = _normalize_threshold_preferences(prefs or _load_threshold_preferences())
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        desc = QLabel(_tr(
+            "thresholds.description",
+            default="Edit the donation and exceptional thresholds used by the sidebar filters."
+        ))
+        desc.setWordWrap(True)
+        desc.setStyleSheet("font-size:12px; color:#a8a8c0;")
+        root.addWidget(desc)
+
+        grid = QGridLayout()
+        grid.setHorizontalSpacing(10)
+        grid.setVerticalSpacing(8)
+
+        self._score_source_combo = QComboBox()
+        self._score_source_combo.addItem(
+            _tr("thresholds.source.base_sum", default="Base stat sum"), "base_sum"
+        )
+        self._score_source_combo.addItem(
+            _tr("thresholds.source.detailed", default="Detailed Scoring total"), "detailed"
+        )
+        current_source = str(self._prefs.get("score_source", "base_sum"))
+        idx = self._score_source_combo.findData(current_source)
+        if idx >= 0:
+            self._score_source_combo.setCurrentIndex(idx)
+        self._score_source_combo.setToolTip(_tr(
+            "thresholds.source.tooltip",
+            default=(
+                "Base stat sum compares raw base-stat totals against the "
+                "integer thresholds below.  Detailed Scoring uses the latest "
+                "total produced by the Detailed Scoring view — open that view "
+                "at least once per save so the cache is populated."
+            ),
+        ))
+        self._score_source_combo.currentIndexChanged.connect(self._update_preview)
+
+        self._exceptional_spin = QSpinBox()
+        self._exceptional_spin.setRange(0, 999)
+        self._exceptional_spin.setValue(self._prefs["exceptional_sum_threshold"])
+        self._exceptional_spin.valueChanged.connect(self._update_preview)
+
+        self._donation_spin = QSpinBox()
+        self._donation_spin.setRange(0, 999)
+        self._donation_spin.setValue(self._prefs["donation_sum_threshold"])
+        self._donation_spin.valueChanged.connect(self._update_preview)
+
+        self._top_stat_spin = QSpinBox()
+        self._top_stat_spin.setRange(0, 20)
+        self._top_stat_spin.setValue(self._prefs["donation_max_top_stat"])
+        self._top_stat_spin.valueChanged.connect(self._update_preview)
+
+        self._detailed_exceptional_spin = QDoubleSpinBox()
+        self._detailed_exceptional_spin.setRange(-999.0, 999.0)
+        self._detailed_exceptional_spin.setDecimals(1)
+        self._detailed_exceptional_spin.setSingleStep(1.0)
+        self._detailed_exceptional_spin.setValue(float(self._prefs.get("detailed_exceptional_threshold", 20.0)))
+        self._detailed_exceptional_spin.valueChanged.connect(self._update_preview)
+
+        self._detailed_donation_spin = QDoubleSpinBox()
+        self._detailed_donation_spin.setRange(-999.0, 999.0)
+        self._detailed_donation_spin.setDecimals(1)
+        self._detailed_donation_spin.setSingleStep(1.0)
+        self._detailed_donation_spin.setValue(float(self._prefs.get("detailed_donation_threshold", -5.0)))
+        self._detailed_donation_spin.valueChanged.connect(self._update_preview)
+
+        self._planner_trait_check = QCheckBox(_tr(
+            "thresholds.planner_trait_toggle",
+            default="Count cats missing selected mutation/ability traits as donation candidates",
+        ))
+        self._planner_trait_check.setChecked(bool(self._prefs["donation_missing_planner_traits"]))
+        self._planner_trait_check.setToolTip(_tr(
+            "thresholds.planner_trait_toggle.tooltip",
+            default="When enabled, cats that do not carry any selected mutation or ability traits will count as donation candidates.",
+        ))
+        self._planner_trait_check.toggled.connect(self._update_preview)
+
+        self._adaptive_check = QCheckBox(_tr(
+            "thresholds.adaptive_toggle",
+            default="Adjust thresholds from the living-cat average",
+        ))
+        self._adaptive_check.setChecked(self._prefs["adaptive_enabled"])
+        self._adaptive_check.toggled.connect(self._update_preview)
+
+        self._reference_spin = QDoubleSpinBox()
+        self._reference_spin.setRange(0.0, 99.0)
+        self._reference_spin.setDecimals(1)
+        self._reference_spin.setSingleStep(0.5)
+        self._reference_spin.setValue(float(self._prefs["adaptive_reference_avg_sum"]))
+        self._reference_spin.valueChanged.connect(self._update_preview)
+
+        self._curve_spin = QDoubleSpinBox()
+        self._curve_spin.setRange(0.0, 5.0)
+        self._curve_spin.setDecimals(2)
+        self._curve_spin.setSingleStep(0.1)
+        self._curve_spin.setValue(float(self._prefs["adaptive_curve_strength"]))
+        self._curve_spin.valueChanged.connect(self._update_preview)
+
+        self._source_label = QLabel(_tr("thresholds.source", default="Score source"))
+        grid.addWidget(self._source_label, 0, 0)
+        grid.addWidget(self._score_source_combo, 0, 1)
+        self._base_exc_label = QLabel(_tr("thresholds.exceptional", default="Exceptional threshold"))
+        grid.addWidget(self._base_exc_label, 1, 0)
+        grid.addWidget(self._exceptional_spin, 1, 1)
+        self._base_don_label = QLabel(_tr("thresholds.donation", default="Donation threshold"))
+        grid.addWidget(self._base_don_label, 2, 0)
+        grid.addWidget(self._donation_spin, 2, 1)
+        self._base_top_label = QLabel(_tr("thresholds.donation_top_stat", default="Donation max top stat"))
+        grid.addWidget(self._base_top_label, 3, 0)
+        grid.addWidget(self._top_stat_spin, 3, 1)
+        self._detailed_exc_label = QLabel(_tr(
+            "thresholds.detailed_exceptional", default="Exceptional detailed score"
+        ))
+        grid.addWidget(self._detailed_exc_label, 4, 0)
+        grid.addWidget(self._detailed_exceptional_spin, 4, 1)
+        self._detailed_don_label = QLabel(_tr(
+            "thresholds.detailed_donation", default="Donation detailed score"
+        ))
+        grid.addWidget(self._detailed_don_label, 5, 0)
+        grid.addWidget(self._detailed_donation_spin, 5, 1)
+        grid.addWidget(self._planner_trait_check, 6, 0, 1, 2)
+        grid.addWidget(self._adaptive_check, 7, 0, 1, 2)
+        grid.addWidget(QLabel(_tr("thresholds.reference_average", default="Reference living average")), 8, 0)
+        grid.addWidget(self._reference_spin, 8, 1)
+        grid.addWidget(QLabel(_tr("thresholds.curve_strength", default="Curve strength")), 9, 0)
+        grid.addWidget(self._curve_spin, 9, 1)
+        root.addLayout(grid)
+
+        self._current_avg_label = QLabel()
+        self._current_avg_label.setWordWrap(True)
+        self._current_avg_label.setStyleSheet("color:#9ea4c6;")
+        root.addWidget(self._current_avg_label)
+
+        self._preview_label = QLabel()
+        self._preview_label.setWordWrap(True)
+        self._preview_label.setStyleSheet("color:#d8d8e8; font-weight:bold;")
+        root.addWidget(self._preview_label)
+
+        button_row = QHBoxLayout()
+        button_row.addStretch(1)
+        cancel_btn = QPushButton(_tr("common.cancel", default="Cancel"))
+        cancel_btn.clicked.connect(self.reject)
+        ok_btn = QPushButton(_tr("common.ok", default="OK"))
+        ok_btn.clicked.connect(self.accept)
+        button_row.addWidget(cancel_btn)
+        button_row.addWidget(ok_btn)
+        root.addLayout(button_row)
+
+        self._adaptive_check.toggled.connect(self._update_adaptive_controls)
+        self._score_source_combo.currentIndexChanged.connect(self._update_source_visibility)
+        self._update_adaptive_controls(self._adaptive_check.isChecked())
+        self._update_source_visibility()
+        self._update_preview()
+
+    def _update_adaptive_controls(self, enabled: bool):
+        self._reference_spin.setEnabled(enabled)
+        self._curve_spin.setEnabled(enabled)
+
+    def _update_source_visibility(self, *_args):
+        source = str(self._score_source_combo.currentData() or "base_sum")
+        use_detailed = source == "detailed"
+        for widget in (self._base_exc_label, self._exceptional_spin,
+                       self._base_don_label, self._donation_spin,
+                       self._base_top_label, self._top_stat_spin):
+            widget.setVisible(not use_detailed)
+        for widget in (self._detailed_exc_label, self._detailed_exceptional_spin,
+                       self._detailed_don_label, self._detailed_donation_spin):
+            widget.setVisible(use_detailed)
+
+    def _sync_exceptional_floor(self):
+        if self._exceptional_spin.value() < self._donation_spin.value():
+            self._exceptional_spin.blockSignals(True)
+            try:
+                self._exceptional_spin.setValue(self._donation_spin.value())
+            finally:
+                self._exceptional_spin.blockSignals(False)
+
+    def _collect_preferences(self) -> dict:
+        return {
+            "exceptional_sum_threshold": int(self._exceptional_spin.value()),
+            "donation_sum_threshold": int(self._donation_spin.value()),
+            "donation_max_top_stat": int(self._top_stat_spin.value()),
+            "donation_missing_planner_traits": bool(self._planner_trait_check.isChecked()),
+            "adaptive_enabled": bool(self._adaptive_check.isChecked()),
+            "adaptive_reference_avg_sum": float(self._reference_spin.value()),
+            "adaptive_curve_strength": float(self._curve_spin.value()),
+            "score_source": str(self._score_source_combo.currentData() or "base_sum"),
+            "detailed_exceptional_threshold": float(self._detailed_exceptional_spin.value()),
+            "detailed_donation_threshold": float(self._detailed_donation_spin.value()),
+        }
+
+    def _update_preview(self, *_args):
+        self._sync_exceptional_floor()
+        prefs = _normalize_threshold_preferences(self._collect_preferences())
+        exceptional, donation, top_stat, avg_sum = _effective_thresholds_for_cats(prefs, self._cats)
+        if prefs.get("score_source") == "detailed":
+            det_exc = prefs["detailed_exceptional_threshold"]
+            det_don = prefs["detailed_donation_threshold"]
+            preview_text = _tr(
+                "thresholds.preview_detailed",
+                default="Detailed Scoring: Exceptional >= {exc:+.1f}, Donation <= {don:+.1f}",
+                exc=det_exc,
+                don=det_don,
+            )
+            from mewgenics.utils.thresholds import _detailed_scores_ready
+            if not _detailed_scores_ready():
+                preview_text += _tr(
+                    "thresholds.preview_detailed.cache_missing",
+                    default=" — open the Detailed Scoring view to populate the cache; base-sum is used until then.",
+                )
+            self._preview_label.setText(preview_text)
+            if self._cats:
+                self._current_avg_label.setText(
+                    _tr(
+                        "thresholds.current_average",
+                        default="Living cats average base sum: {avg:.1f}",
+                        avg=avg_sum,
+                    )
+                )
+            else:
+                self._current_avg_label.setText("")
+            return
+        if self._cats:
+            self._current_avg_label.setText(
+                _tr(
+                    "thresholds.current_average",
+                    default="Living cats average base sum: {avg:.1f}",
+                    avg=avg_sum,
+                )
+            )
+        else:
+            self._current_avg_label.setText(
+                _tr(
+                    "thresholds.no_save_preview",
+                    default="Load a save to preview the curve; the values below will still be saved.",
+                )
+            )
+        if prefs["adaptive_enabled"] and self._cats:
+            preview_text = _tr(
+                "thresholds.preview",
+                default="Effective now: Exceptional >= {exceptional}, Donation <= {donation}, Donation top stat <= {top_stat}",
+                exceptional=exceptional,
+                donation=donation,
+                top_stat=top_stat,
+            )
+        elif prefs["adaptive_enabled"]:
+            preview_text = _tr(
+                "thresholds.preview_no_save",
+                default="Adaptive mode is on, but there is no save loaded yet.",
+            )
+        else:
+            preview_text = _tr(
+                "thresholds.preview_fixed",
+                default="Fixed thresholds: Exceptional >= {exceptional}, Donation <= {donation}, Donation top stat <= {top_stat}",
+                exceptional=exceptional,
+                donation=donation,
+                top_stat=top_stat,
+            )
+        if prefs.get("donation_missing_planner_traits"):
+            preview_text += _tr(
+                "thresholds.preview.planner_trait_note",
+                default=" Cats missing the selected mutation/ability traits will count as donation candidates if they are still under the stat floor.",
+            )
+        self._preview_label.setText(preview_text)
+
+    def preferences(self) -> dict:
+        return _normalize_threshold_preferences(self._collect_preferences())
+
+
+# ---------------------------------------------------------------------------
+# SharedOptimizerSearchSettingsDialog
+# ---------------------------------------------------------------------------
+
+class SharedOptimizerSearchSettingsDialog(QDialog):
+    def __init__(self, parent=None, settings: dict | None = None):
+        super().__init__(parent)
+        self.setModal(True)
+        self.setWindowTitle(_tr(
+            "menu.settings.optimizer_search_settings.title",
+            default="Shared Optimizer Search Settings",
+        ))
+        self.setMinimumWidth(460)
+        self.setStyleSheet(
+            "QDialog { background:#0a0a18; }"
+            "QLabel { color:#cfcfe0; }"
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a; "
+            "border-radius:4px; padding:6px 12px; font-size:11px; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+            "QSpinBox, QDoubleSpinBox { background:#0d0d1c; color:#ddd; border:1px solid #2a2a4a; "
+            "border-radius:4px; padding:3px 6px; }"
+        )
+
+        self._settings = _normalize_optimizer_search_settings(settings or _load_optimizer_search_settings())
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 16, 16, 16)
+        root.setSpacing(12)
+
+        desc = QLabel(_tr(
+            "menu.settings.optimizer_search_settings.description",
+            default="These values control the simulated annealing search used by the room optimizer and Perfect 7 planner.",
+        ))
+        desc.setWordWrap(True)
+        desc.setStyleSheet("font-size:12px; color:#a8a8c0;")
+        root.addWidget(desc)
+
+        grid = QGridLayout()
+        grid.setHorizontalSpacing(10)
+        grid.setVerticalSpacing(8)
+
+        self._temperature_spin = QDoubleSpinBox()
+        self._temperature_spin.setRange(0.0, 1000.0)
+        self._temperature_spin.setDecimals(1)
+        self._temperature_spin.setSingleStep(0.5)
+        self._temperature_spin.setValue(float(self._settings["temperature"]))
+
+        self._neighbors_spin = QSpinBox()
+        self._neighbors_spin.setRange(1, 5000)
+        self._neighbors_spin.setSingleStep(8)
+        self._neighbors_spin.setValue(int(self._settings["neighbors"]))
+
+        grid.addWidget(QLabel(_tr("room_optimizer.sa_temperature", default="Temperature:")), 0, 0)
+        grid.addWidget(self._temperature_spin, 0, 1)
+        _temp_default = QLabel(f"default: {_OPTIMIZER_SEARCH_DEFAULTS['temperature']:.1f}")
+        _temp_default.setStyleSheet("color:#5a607a; font-size:11px;")
+        grid.addWidget(_temp_default, 0, 2)
+        grid.addWidget(QLabel(_tr("room_optimizer.sa_neighbors", default="Neighbors:")), 1, 0)
+        grid.addWidget(self._neighbors_spin, 1, 1)
+        _neighbors_default = QLabel(f"default: {_OPTIMIZER_SEARCH_DEFAULTS['neighbors']}")
+        _neighbors_default.setStyleSheet("color:#5a607a; font-size:11px;")
+        grid.addWidget(_neighbors_default, 1, 2)
+        root.addLayout(grid)
+
+        note = QLabel(_tr(
+            "menu.settings.optimizer_search_settings.note",
+            default="Changes take effect the next time either planner runs.",
+        ))
+        note.setWordWrap(True)
+        note.setStyleSheet("color:#9ea4c6;")
+        root.addWidget(note)
+
+        button_row = QHBoxLayout()
+        button_row.addStretch(1)
+        cancel_btn = QPushButton(_tr("common.cancel", default="Cancel"))
+        cancel_btn.clicked.connect(self.reject)
+        ok_btn = QPushButton(_tr("common.ok", default="OK"))
+        ok_btn.clicked.connect(self.accept)
+        button_row.addWidget(cancel_btn)
+        button_row.addWidget(ok_btn)
+        root.addLayout(button_row)
+
+    def preferences(self) -> dict:
+        return _normalize_optimizer_search_settings({
+            "temperature": float(self._temperature_spin.value()),
+            "neighbors": int(self._neighbors_spin.value()),
+        })
+
+
+# ---------------------------------------------------------------------------
+# SaveSelectorDialog
+# ---------------------------------------------------------------------------
+
+class SaveSelectorDialog(QDialog):
+    """Startup dialog for picking which save file to load."""
+
+    def __init__(self, saves: list[str], parent=None):
+        super().__init__(parent)
+        self.setWindowTitle(f"{_tr('app.title')} \u2014 {_tr('save_picker.title')}")
+        self.setFixedSize(520, 360)
+        self.setStyleSheet(
+            "QDialog { background:#0d0d1c; }"
+            "QLabel { color:#ccc; }"
+            "QListWidget { background:#101023; color:#ddd; border:1px solid #26264a;"
+            " font-size:13px; }"
+            "QListWidget::item { padding:6px; }"
+            "QListWidget::item:selected { background:#1e3060; }"
+            "QPushButton { background:#1f5f4a; color:#f2f7f3; border:1px solid #3f8f72;"
+            " border-radius:4px; padding:8px 20px; font-size:12px; font-weight:bold; }"
+            "QPushButton:hover { background:#26735a; }"
+            "QPushButton:disabled { background:#1a1a32; color:#555; border-color:#2a2a4a; }"
+        )
+        self._selected_path: Optional[str] = None
+
+        vb = QVBoxLayout(self)
+        vb.setContentsMargins(16, 16, 16, 16)
+        vb.setSpacing(12)
+
+        title = QLabel(_tr("save_picker.title"))
+        title.setStyleSheet("color:#ddd; font-size:16px; font-weight:bold;")
+        vb.addWidget(title)
+
+        self._list = QListWidget()
+        self._list.setIconSize(QSize(60, 20))
+        for path in saves:
+            name = os.path.basename(path)
+            folder = os.path.basename(os.path.dirname(os.path.dirname(path)))
+            mtime = os.path.getmtime(path)
+            ts = datetime.datetime.fromtimestamp(mtime).strftime("%Y-%m-%d %H:%M")
+            item = QListWidgetItem(f"{name}  ({folder})  \u2014  {ts}")
+            item.setData(Qt.UserRole, path)
+            self._list.addItem(item)
+        self._list.setCurrentRow(0)
+        self._list.itemDoubleClicked.connect(lambda _: self._accept())
+        vb.addWidget(self._list, 1)
+
+        btn_row = QHBoxLayout()
+        btn_row.addStretch()
+        self._open_btn = QPushButton(_tr("save_picker.open"))
+        self._open_btn.clicked.connect(self._accept)
+        self._open_btn.setEnabled(len(saves) > 0)
+        btn_row.addWidget(self._open_btn)
+
+        browse_btn = QPushButton(_tr("save_picker.browse"))
+        browse_btn.setStyleSheet(
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+        )
+        browse_btn.clicked.connect(self._browse)
+        btn_row.addWidget(browse_btn)
+        vb.addLayout(btn_row)
+
+    def _accept(self):
+        cur = self._list.currentItem()
+        if cur is not None:
+            self._selected_path = cur.data(Qt.UserRole)
+            self.accept()
+
+    def _browse(self):
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            _tr("dialog.open_save.title"),
+            str(Path.home()),
+            _tr("dialog.open_save.filter"),
+        )
+        if path:
+            self._selected_path = path
+            self.accept()
+
+    @property
+    def selected_path(self) -> Optional[str]:
+        return self._selected_path
+
+
+# ---------------------------------------------------------------------------
+# StatsOverviewDialog
+# ---------------------------------------------------------------------------
+
+class StatsOverviewDialog(QDialog):
+    """Non-blocking popup: alive cats x current stats with injury breakdown."""
+
+    def __init__(self, cats: list, stat_names: list | None = None,
+                 room_display: dict | None = None, parent=None):
+        super().__init__(parent)
+        from save_parser import STAT_NAMES as _PARSER_STAT_NAMES
+        self._all_cats = cats
+        self._stat_names = stat_names or list(_PARSER_STAT_NAMES)
+        self._room_disp = room_display or {}
+        self._include_injuries = True
+
+        n = len(self._stat_names)
+        self._col_sum = 2 + n
+        self._col_fx = 3 + n
+        self._num_cols = 4 + n
+
+        self.setWindowTitle("Current Stats Overview")
+        self.setWindowFlags(self.windowFlags() | Qt.Window)
+        self.setStyleSheet("background:#0a0a18; color:#d7d7e6;")
+        self.resize(960, 580)
+
+        vb = QVBoxLayout(self)
+        vb.setContentsMargins(12, 12, 12, 12)
+        vb.setSpacing(8)
+
+        # Header
+        hdr = QWidget()
+        hdr.setStyleSheet("background:#1a1a32; border-radius:4px; border-bottom:1px solid #2a2a4a;")
+        hdr_l = QHBoxLayout(hdr)
+        hdr_l.setContentsMargins(10, 6, 10, 6)
+        hdr_l.setSpacing(10)
+        title = QLabel("Current Stats Overview")
+        title.setStyleSheet("color:#d7d7e6; font-size:14px; font-weight:bold;")
+        hdr_l.addWidget(title)
+        hdr_l.addStretch()
+        self._chk_injuries = QCheckBox("Include injuries / effects")
+        self._chk_injuries.setChecked(True)
+        self._chk_injuries.setStyleSheet("color:#bbb; font-size:11px;")
+        self._chk_injuries.stateChanged.connect(self._on_toggle)
+        hdr_l.addWidget(self._chk_injuries)
+        vb.addWidget(hdr)
+
+        # Table
+        headers = ["Name", "Loc"] + list(self._stat_names) + ["Sum", "Effects"]
+        self._table = QTableWidget()
+        self._table.setColumnCount(self._num_cols)
+        self._table.setHorizontalHeaderLabels(headers)
+        self._table.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self._table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self._table.setSelectionMode(QAbstractItemView.SingleSelection)
+        self._table.setAlternatingRowColors(True)
+        self._table.setSortingEnabled(False)
+        self._table.setStyleSheet(
+            "QTableWidget { background:#0d0d1c; color:#ccc; gridline-color:#1e1e38;"
+            " border:1px solid #2a2a4a; }"
+            "QTableWidget::item:selected { background:#1e3060; }"
+            "QHeaderView::section { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a;"
+            " padding:4px; font-weight:bold; }"
+        )
+        self._table.verticalHeader().setVisible(False)
+        hh = self._table.horizontalHeader()
+        hh.setSectionResizeMode(0, QHeaderView.Stretch)
+        hh.setSectionResizeMode(1, QHeaderView.Fixed)
+        self._table.setColumnWidth(1, 68)
+        for c in range(2, 2 + n):
+            hh.setSectionResizeMode(c, QHeaderView.Fixed)
+            self._table.setColumnWidth(c, 38)
+        hh.setSectionResizeMode(self._col_sum, QHeaderView.Fixed)
+        self._table.setColumnWidth(self._col_sum, 44)
+        hh.setSectionResizeMode(self._col_fx, QHeaderView.Interactive)
+        self._table.setColumnWidth(self._col_fx, 220)
+        vb.addWidget(self._table)
+
+        # Footer
+        self._note = QLabel("")
+        self._note.setStyleSheet("color:#666; font-size:10px;")
+        vb.addWidget(self._note)
+        close_btn = QPushButton("Close")
+        close_btn.setStyleSheet(
+            "QPushButton { background:#1a1a32; color:#aaa; border:1px solid #2a2a4a;"
+            " border-radius:4px; padding:6px 16px; }"
+            "QPushButton:hover { background:#252545; color:#ddd; }"
+        )
+        close_btn.clicked.connect(self.accept)
+        vb.addWidget(close_btn, alignment=Qt.AlignRight)
+
+        self._populate()
+
+    def _on_toggle(self):
+        self._include_injuries = self._chk_injuries.isChecked()
+        self._populate()
+
+    def _populate(self):
+        cats = [c for c in self._all_cats if getattr(c, 'status', 'Gone') != 'Gone']
+        self.setUpdatesEnabled(False)
+        try:
+            self._table.setSortingEnabled(False)
+            self._table.setRowCount(len(cats))
+            fx_count = 0
+            for row, cat in enumerate(cats):
+                base = getattr(cat, 'base_stats', {}) or {}
+                stats = get_cat_stats(cat, self._include_injuries)
+                # Name
+                self._table.setItem(row, 0, QTableWidgetItem(getattr(cat, 'name', '?')))
+                # Location
+                raw_room = getattr(cat, 'room', '') or ''
+                loc_text = 'Adv.' if getattr(cat, 'status', '') == 'Adventure' else self._room_disp.get(raw_room, raw_room or '\u2014')
+                loc_item = QTableWidgetItem(loc_text)
+                loc_item.setTextAlignment(Qt.AlignCenter)
+                self._table.setItem(row, 1, loc_item)
+                # Stats
+                cat_sum = 0
+                for ci, sn in enumerate(self._stat_names):
+                    val = stats.get(sn, 0)
+                    cat_sum += val
+                    item = QTableWidgetItem()
+                    item.setData(Qt.DisplayRole, val)
+                    item.setTextAlignment(Qt.AlignCenter)
+                    b_val = base.get(sn, 0)
+                    if val >= 7:
+                        item.setForeground(QColor("#1ec8a0"))
+                    elif val == 6:
+                        item.setForeground(QColor("#777777"))
+                    elif val < 5:
+                        item.setForeground(QColor("#555555"))
+                    if self._include_injuries and val < b_val:
+                        item.setBackground(QColor("#2a0505"))
+                    self._table.setItem(row, 2 + ci, item)
+                # Sum
+                sum_item = QTableWidgetItem()
+                sum_item.setData(Qt.DisplayRole, cat_sum)
+                sum_item.setTextAlignment(Qt.AlignCenter)
+                self._table.setItem(row, self._col_sum, sum_item)
+                # Effects
+                effects = []
+                for sn in self._stat_names:
+                    b = base.get(sn, 0)
+                    t = stats.get(sn, b)
+                    if t != b:
+                        effects.append((sn, t - b))
+                if effects:
+                    fx_count += 1
+                    fx_text = ", ".join(f"{sn} {d:+d}" for sn, d in effects)
+                    fx_item = QTableWidgetItem(fx_text)
+                    has_neg = any(d < 0 for _, d in effects)
+                    has_pos = any(d > 0 for _, d in effects)
+                    if has_neg and not has_pos:
+                        fx_item.setForeground(QColor("#e04040"))
+                    elif has_pos and not has_neg:
+                        fx_item.setForeground(QColor("#1ec8a0"))
+                else:
+                    fx_item = QTableWidgetItem("\u2014")
+                    fx_item.setForeground(QColor("#555"))
+                self._table.setItem(row, self._col_fx, fx_item)
+            self._table.setSortingEnabled(True)
+            self._table.sortByColumn(self._col_sum, Qt.DescendingOrder)
+            mode = "effective" if self._include_injuries else "base"
+            self._note.setText(f"{len(cats)} alive cats  \u00b7  {fx_count} with stat effects  \u00b7  showing {mode} stats")
+        finally:
+            self.setUpdatesEnabled(True)
+
+    def refresh(self, cats: list):
+        self._all_cats = cats
+        self._populate()
